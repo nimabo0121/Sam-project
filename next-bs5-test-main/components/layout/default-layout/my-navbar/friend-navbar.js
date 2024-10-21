@@ -16,7 +16,7 @@ export default function FriendNavbar({ onChatOpen }) {
       {/* Toggle Button */}
       <nav
         id="sidebar"
-        className={`sidebar position-absolute ${isCollapsed ? '' : 'bg-light'}`}
+        className={`sidebar position-absolute ${isCollapsed ? '' : ''}`}
         style={{
           height: '100%',
           width: isCollapsed ? '35px' : '250px',

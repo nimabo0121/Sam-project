@@ -52,7 +52,7 @@ router.get('/:friendId', authenticate, async (req, res) => {
   try {
     // 獲取與好友的聊天記錄，包含發送者姓名和頭像
     const [messages] = await sequelize.query(
-      `SELECT m.id, m.message, m.sender_id, m.receiver_id, u.name AS sender_name, u.avatar AS sender_avatar 
+      `SELECT m.id, m.message, m.sender_id, m.receiver_id , m.created_at, u.name AS sender_name, u.avatar AS sender_avatar 
      FROM messages m 
      JOIN user u ON m.sender_id = u.id 
      WHERE (m.sender_id = ? AND m.receiver_id = ?) OR (m.sender_id = ? AND m.receiver_id = ?) 

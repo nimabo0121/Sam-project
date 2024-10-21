@@ -54,6 +54,7 @@ export default function DefaultLayout({ title = 'Next-BS5', children }) {
               friendName={activeChat.name}
               friendAvatar={activeChat.avatar}
               onClose={closeChat}
+              isOpen={Boolean(activeChat)}
             />
           )}
 

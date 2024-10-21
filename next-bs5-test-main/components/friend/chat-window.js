@@ -1,12 +1,19 @@
 import React, { useEffect, useState, useRef } from 'react'
 import axios from 'axios'
 
-const ChatWindow = ({ friendId, friendName, friendAvatar, onClose }) => {
+const ChatWindow = ({
+  friendId,
+  friendName,
+  friendAvatar,
+  onClose,
+  isOpen,
+}) => {
   const [messages, setMessages] = useState([])
   const [newMessage, setNewMessage] = useState('')
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-  const messagesEndRef = useRef(null) // 用來滾動至最新消息
+  const messagesEndRef = useRef(null) // 滾動至最新消息
+  const hasScrolledToBottom = useRef(false) // 追蹤是否已經滾動到最新消息
 
   // 獲取聊天記錄的函數
   const fetchMessages = async () => {
@@ -31,16 +38,33 @@ const ChatWindow = ({ friendId, friendName, friendAvatar, onClose }) => {
   // 獲取聊天記錄
   useEffect(() => {
     fetchMessages() // 初次載入時獲取聊天記錄
-    const interval = setInterval(fetchMessages, 1000) // 每秒獲取一次聊天記錄
+    const interval = setInterval(fetchMessages, 1000) // 每秒取得一次聊天記錄
 
     // 清理 interval
     return () => clearInterval(interval)
   }, [friendId])
 
-  // 自動滾動到最新消息
+  // 每次聊天窗口開啟時滾動到最新消息
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }, [messages])
+    if (isOpen) {
+      hasScrolledToBottom.current = false // 重置滾動狀態
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }) // 滾動到最新消息
+    }
+  }, [isOpen]) // 依賴 isOpen，當其為 true 時觸發
+
+  // 當 messages 更新時，滾動到最新消息
+  useEffect(() => {
+    if (isOpen && messages.length > 0 && !hasScrolledToBottom.current) {
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+      hasScrolledToBottom.current = true // 設置為 true，關閉滾動
+    }
+  }, [messages, isOpen])
+
+  // 聊天室關閉時重置滾動狀態
+  const handleClose = () => {
+    onClose()
+    hasScrolledToBottom.current = false // 重置狀態
+  }
 
   // 發送消息
   const sendMessage = async () => {
@@ -59,8 +83,6 @@ const ChatWindow = ({ friendId, friendName, friendAvatar, onClose }) => {
         ...prev,
         {
           message: newMessage,
-          sender_id: 'currentUserId', // 這裡應替換為真實的當前用戶ID
-          sender_name: '當前用戶', // 顯示當前用戶名稱
           sender_avatar: 'path/to/currentUserAvatar',
         },
       ])
@@ -91,7 +113,7 @@ const ChatWindow = ({ friendId, friendName, friendAvatar, onClose }) => {
       }}
     >
       <div style={{ display: 'flex', alignItems: 'center' }}>
-        <button onClick={onClose}>X</button>
+        <button onClick={handleClose}>X</button>
         <img
           src={`http://localhost:3005/avatar/${friendAvatar}`} // 使用 friendAvatar
           alt={`${friendName} 頭像`}
@@ -115,43 +137,85 @@ const ChatWindow = ({ friendId, friendName, friendAvatar, onClose }) => {
           marginTop: '10px',
         }}
       >
-        {messages.map((msg, index) => (
+        {messages.map((msg, i) => (
           <div
-            key={index} // 這裡使用 index 作為 key，應替換為訊息的唯一 ID
+            key={i} // i 為 key，訊息的唯一 ID
             style={{
-              textAlign: msg.sender_id === friendId ? 'left' : 'right',
               margin: '5px 0',
               display: 'flex',
               justifyContent:
                 msg.sender_id === friendId ? 'flex-start' : 'flex-end',
+              alignItems: 'flex-end', // 將訊息和時間戳垂直對齊
             }}
           >
-            {msg.sender_id === friendId ? (
+            {msg.sender_id === friendId && (
               <strong>
                 <img
                   className="mx-2"
                   src={`http://localhost:3005/avatar/${msg.sender_avatar}`}
-                  alt={`${msg.sender_name} 頭像`} // 使用正確的名稱
+                  alt={`${msg.sender_name} 頭像`}
                   style={{ width: '35px', height: '35px', borderRadius: '50%' }}
                 />
               </strong>
-            ) : null}
-            <span
-              style={{
-                backgroundColor:
-                  msg.sender_id === friendId ? '#f0f0f0' : '#d1e7dd',
-                padding: '10px',
-                borderRadius: '10px',
-                marginLeft: msg.sender_id === friendId ? '5px' : '0',
-                marginRight: msg.sender_id !== friendId ? '5px' : '0',
-              }}
-            >
-              {msg.message}
-            </span>
+            )}
+            {msg.sender_id === friendId ? (
+              <>
+                <span
+                  style={{
+                    backgroundColor: '#f0f0f0',
+                    padding: '10px',
+                    borderRadius: '10px',
+                    marginLeft: '5px',
+                  }}
+                >
+                  {msg.message}
+                </span>
+                <small
+                  style={{
+                    fontSize: '0.7em',
+                    color: '#999',
+                    alignSelf: 'flex-end', // 時間戳對齊到底部
+                    marginLeft: '5px',
+                  }}
+                >
+                  {new Date(msg.created_at).toLocaleString('zh-TW', {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                  })}
+                </small>
+              </>
+            ) : (
+              <>
+                <small
+                  style={{
+                    fontSize: '0.7em',
+                    color: '#999',
+                    alignSelf: 'flex-end', // 時間戳對齊到底部
+                    marginRight: '5px',
+                  }}
+                >
+                  {new Date(msg.created_at).toLocaleString('zh-TW', {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                  })}
+                </small>
+                <span
+                  style={{
+                    backgroundColor: '#d1e7dd',
+                    padding: '10px',
+                    borderRadius: '10px',
+                    marginRight: '5px',
+                  }}
+                >
+                  {msg.message}
+                </span>
+              </>
+            )}
           </div>
         ))}
         <div ref={messagesEndRef} /> {/* 滾動到最新消息 */}
       </div>
+      {/* 輸入欄位 */}
       <div style={{ marginTop: '10px', display: 'flex', gap: '5px' }}>
         <input
           type="text"
