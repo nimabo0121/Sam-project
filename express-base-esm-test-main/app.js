@@ -14,7 +14,7 @@ import { Server as SocketServer } from 'socket.io' // 從 socket.io 中引入 Se
 // 使用檔案的 session store，存在 sessions 資料夾
 const FileStore = sessionFileStore(session)
 
-// 修正 ESM 中的 __dirname 與 Windows 環境下的動態導入
+//  ESM 中的 __dirname 與 Windows 環境下的動態導入
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
@@ -35,7 +35,7 @@ const io = new SocketServer(server, {
     origin: 'http://localhost:3000', // 允許的來源
     methods: ['GET', 'POST'], // 允許的 HTTP 方法
     allowedHeaders: ['my-custom-header'], // 允許的自定義標頭
-    credentials: true, // 是否允許帶上 cookie
+    credentials: true, // 允許帶上 cookie
   },
 })
 
@@ -43,13 +43,13 @@ const io = new SocketServer(server, {
 const users = {}
 
 // 當有用戶連接時
-io.on('connection', (socket) => {
-  console.log('A user connected:', socket.id)
+io.on('連線', (socket) => {
+  console.log('用戶已連接:', socket.id)
 
-  // 當用戶登錄時，將用戶 ID 與 socket.id 綁定
-  socket.on('register', (userId) => {
+  // 用戶登錄時，將用戶 ID 與 socket.id 綁定
+  socket.on('登入', (userId) => {
     users[userId] = socket.id // 將用戶 ID 與 socket.id 存入 users 對象
-    console.log(`User registered: ${userId}`)
+    console.log(`用戶已登入: ${userId}`)
   })
 
   // 當接收到訊息時，發送給特定用戶
@@ -61,9 +61,9 @@ io.on('connection', (socket) => {
       socket
         .to(recipientSocketId)
         .emit('newMessage', { from: socket.id, message })
-      console.log(`Message sent to ${recipientId}:`, message)
+      console.log(`Message sent to ${recipientId}:`, message) // 新訊息已發送至接收者
     } else {
-      console.log(`User ${recipientId} is not connected.`)
+      console.log(`User ${recipientId} is not connected.`) // 對方未連線
     }
   })
 
@@ -83,7 +83,7 @@ io.on('connection', (socket) => {
 
 const PORT = process.env.PORT || 3006
 server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`)
+  console.log(`伺服器運行 port ${PORT}`)
 })
 
 // 設置 CORS，請確保設置中包含必要的參數

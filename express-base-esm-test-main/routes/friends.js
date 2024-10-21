@@ -47,8 +47,8 @@ router.post('/accept', authenticate, async (req, res) => {
         replacements: [friendId, currentUserId], // 更新好友請求狀態
       }
     )
-
-    // 新建一條雙向的好友關係 (即當前用戶也成為對方的好友)
+    // 如果同意好友
+    // 新建一條雙向的好友關係 (當前用戶也成為對方的好友)
     await sequelize.query(
       `
       INSERT INTO friends (user_id, friend_id, status)
