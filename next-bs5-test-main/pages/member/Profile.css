@@ -1,0 +1,31 @@
+.member-profile-container {
+    max-width: 31rem;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+  }
+  
+  .order-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out; /* 添加动画过渡效果 */
+  }
+  
+  .order-card:hover {
+    transform: scale(1.02); /* 悬停时放大 */
+  }
+  
+  .pagination-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination-buttons button {
+    margin: 0 10px;
+  }
+  
