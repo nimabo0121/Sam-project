@@ -3,15 +3,17 @@ import MyNavbarBS5 from './my-navbar'
 import MyFooter from './my-footer'
 import Head from 'next/head'
 import { useLoader } from '@/hooks/use-loader'
-import FriendNavber from './my-navbar/friend-navber'
+import FriendNavbar from './my-navbar/friend-navbar'
 import ChatWindow from '@/components/friend/chat-window'
+import { useAuth } from '@/hooks/use-auth' // 判斷login hooks
 
 export default function DefaultLayout({ title = 'Next-BS5', children }) {
   const { loader } = useLoader()
+  const { isAuthenticated } = useAuth() // 判斷是否 login
   const [activeChat, setActiveChat] = useState(null) // 在 DefaultLayout 中管理聊天狀態
 
   const openChat = (friendId, friendName, friendAvatar) => {
-    setActiveChat({ id: friendId, name: friendName , avatar: friendAvatar}) // 設置當前聊天的好友
+    setActiveChat({ id: friendId, name: friendName, avatar: friendAvatar }) // 設置當前聊天的好友
   }
 
   const closeChat = () => {
@@ -36,8 +38,9 @@ export default function DefaultLayout({ title = 'Next-BS5', children }) {
             height: '100%',
           }}
         >
+          {/* 登入才顯示friendnavbar */}
           {/* 傳遞 openChat 方法給 FriendNavber */}
-          <FriendNavber onChatOpen={openChat} />
+          {isAuthenticated && <FriendNavbar onChatOpen={openChat} />}
 
           <div className="content-wrapper container" style={{ zIndex: '999' }}>
             {children}
