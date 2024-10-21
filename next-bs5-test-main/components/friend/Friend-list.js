@@ -81,7 +81,7 @@ const FriendList = () => {
   }
 
   if (loading) return <div>加載中...</div>
-  if (error) return <div>錯誤: {error}</div>
+  if (error) return <div>{/* 錯誤: {error} */}</div>
 
   return (
     <div>

@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
 const FriendListA = ({ onChatOpen }) => {
-  const [acceptedRequests, setAcceptedRequests] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [acceptedRequests, setAcceptedRequests] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     const fetchAcceptedRequests = async () => {
@@ -12,31 +12,33 @@ const FriendListA = ({ onChatOpen }) => {
         const response = await axios.get(
           'http://localhost:3005/api/friends/accepted',
           { withCredentials: true }
-        );
+        )
         if (response.data.status === 'success') {
-          setAcceptedRequests(response.data.data);
+          setAcceptedRequests(response.data.data)
         } else {
-          setError(response.data.message);
+          setError(response.data.message)
         }
       } catch (err) {
-        setError('無法獲取好友列表');
-        console.error(err);
+        setError('無法獲取好友列表')
+        console.error(err)
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
-    };
+    }
 
-    fetchAcceptedRequests();
-  }, []);
+    fetchAcceptedRequests()
+  }, [])
 
   // 加載和錯誤處理
-  if (loading) return <div>加載中...</div>;
-  if (error) return (
-    <div>
-      <p>錯誤: {error}</p>
-      <button onClick={() => window.location.reload()}>重試</button> {/* 重試按鈕 */}
-    </div>
-  );
+  if (loading) return <div>加載中...</div>
+  if (error)
+    return (
+      <div>
+        {/* <p>錯誤: {error}</p>
+        <button onClick={() => window.location.reload()}>重試</button>{' '}
+        重試按鈕 */}
+      </div>
+    )
 
   return (
     <div>
@@ -48,7 +50,9 @@ const FriendListA = ({ onChatOpen }) => {
           {acceptedRequests.map((request) => (
             <div
               key={request.id}
-              onClick={() => onChatOpen(request.id, request.name, request.avatar)} // 點擊好友時傳遞好友ID和名稱
+              onClick={() =>
+                onChatOpen(request.id, request.name, request.avatar)
+              } // 點擊好友時傳遞好友ID和名稱
               style={{
                 cursor: 'pointer',
                 margin: '10px 0',
@@ -58,7 +62,9 @@ const FriendListA = ({ onChatOpen }) => {
                 borderRadius: '5px',
                 transition: 'background-color 0.2s',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#f0f0f0')}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.backgroundColor = '#f0f0f0')
+              }
               onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '')}
             >
               <img
@@ -73,7 +79,7 @@ const FriendListA = ({ onChatOpen }) => {
         </>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default FriendListA;
+export default FriendListA

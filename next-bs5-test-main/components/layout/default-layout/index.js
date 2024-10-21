@@ -9,7 +9,7 @@ import { useAuth } from '@/hooks/use-auth' // 判斷login hooks
 
 export default function DefaultLayout({ title = 'Next-BS5', children }) {
   const { loader } = useLoader()
-  const { isAuthenticated } = useAuth() // 判斷是否 login
+  const { auth } = useAuth() // 判斷是否 login
   const [activeChat, setActiveChat] = useState(null) // 在 DefaultLayout 中管理聊天狀態
 
   const openChat = (friendId, friendName, friendAvatar) => {
@@ -38,9 +38,10 @@ export default function DefaultLayout({ title = 'Next-BS5', children }) {
             height: '100%',
           }}
         >
-          {/* 登入才顯示friendnavbar */}
-          {/* 傳遞 openChat 方法給 FriendNavber */}
-          {isAuthenticated && <FriendNavbar onChatOpen={openChat} />}
+          {/* 登入才顯示FriendNavbar */}
+          {/* 傳遞 openChat 方法給 FriendNavbar */}
+          {/* {console.log("auth 狀態: ", auth)} */}
+          {auth.isAuth && <FriendNavbar onChatOpen={openChat} />}
 
           <div className="content-wrapper container" style={{ zIndex: '999' }}>
             {children}
