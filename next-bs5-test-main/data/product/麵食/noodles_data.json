@@ -1,0 +1,95 @@
+[
+  {
+    "name": "芋頭炊粉湯",
+    "imgSrc": "public\\images\\711\\芋頭炊粉湯.png",
+    "price": "79元"
+  },
+  {
+    "name": "芋頭排骨酥湯麵",
+    "imgSrc": "public\\images\\711\\芋頭排骨酥湯麵.png",
+    "price": "99元",
+    "calories": "熱量430kcal"
+  },
+  {
+    "name": "焗烤奶油蝦仁通心粉",
+    "imgSrc": "public\\images\\711\\焗烤奶油蝦仁通心粉.png",
+    "price": "69元"
+  },
+  {
+    "name": "木曜-香蒜番茄野菇義大利麵",
+    "imgSrc": "public\\images\\711\\木曜-香蒜番茄野菇義大利麵.png",
+    "price": "89元",
+    "calories": "熱量480kcal"
+  },
+  {
+    "name": "韓式炸醬拌麵",
+    "imgSrc": "public\\images\\711\\韓式炸醬拌麵.png",
+    "price": "85元",
+    "calories": "熱量601kcal"
+  },
+  {
+    "name": "日式擔擔冷烏龍麵",
+    "imgSrc": "public\\images\\711\\日式擔擔冷烏龍麵.png",
+    "price": "89元"
+  },
+  {
+    "name": "日式蕎麥風味麵",
+    "imgSrc": "public\\images\\711\\日式蕎麥風味麵.png",
+    "price": "52元",
+    "calories": "熱量320kcal"
+  },
+  {
+    "name": "真飽涼麵-特選麻醬",
+    "imgSrc": "public\\images\\711\\真飽涼麵-特選麻醬.png",
+    "price": "59元",
+    "calories": "熱量674kcal"
+  },
+  {
+    "name": "真飽涼麵-蒜辣麻醬",
+    "imgSrc": "public\\images\\711\\真飽涼麵-蒜辣麻醬.png",
+    "price": "59元",
+    "calories": "熱量676kcal"
+  },
+  {
+    "name": "御選川辣麻醬雞絲涼麵",
+    "imgSrc": "public\\images\\711\\御選川辣麻醬雞絲涼麵.png",
+    "price": "59元",
+    "calories": "熱量524kcal"
+  },
+  {
+    "name": "御選麻醬雞絲涼麵",
+    "imgSrc": "public\\images\\711\\御選麻醬雞絲涼麵.png",
+    "price": "59元",
+    "calories": "熱量496kcal"
+  },
+  {
+    "name": "御選-精燉紅燒牛肉麵",
+    "imgSrc": "public\\images\\711\\御選-精燉紅燒牛肉麵.png",
+    "price": "139元",
+    "calories": "熱量553kcal"
+  },
+  {
+    "name": "府城鹽水風味意麵",
+    "imgSrc": "public\\images\\711\\府城鹽水風味意麵.png",
+    "price": "79元",
+    "calories": "熱量570kcal"
+  },
+  {
+    "name": "蘑菇雙醬豬排鐵板麵",
+    "imgSrc": "public\\images\\711\\蘑菇雙醬豬排鐵板麵.png",
+    "price": "89元",
+    "calories": "熱量599kcal"
+  },
+  {
+    "name": "蔥爆沙茶牛肉炒麵",
+    "imgSrc": "public\\images\\711\\蔥爆沙茶牛肉炒麵.png",
+    "price": "89元",
+    "calories": "熱量571kcal"
+  },
+  {
+    "name": "滿漢大餐酸菜牛肉拌麵",
+    "imgSrc": "public\\images\\711\\滿漢大餐酸菜牛肉拌麵.png",
+    "price": "109元",
+    "calories": "熱量500kcal"
+  }
+]

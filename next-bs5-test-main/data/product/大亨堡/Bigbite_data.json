@@ -1,0 +1,50 @@
+[
+  {
+    "name": "星宇航空-美式爆汁熱狗堡",
+    "imgSrc": "public\\images\\711\\星宇航空-美式爆汁熱狗堡.png",
+    "price": "69元",
+    "calories": "熱量390kcal"
+  },
+  {
+    "name": "起司四重奏熱狗堡",
+    "imgSrc": "public\\images\\711\\起司四重奏熱狗堡.png",
+    "price": "55元",
+    "calories": "熱量453kcal"
+  },
+  {
+    "name": "橋村辣醬熱狗",
+    "imgSrc": "public\\images\\711\\橋村辣醬熱狗.png",
+    "price": "38元",
+    "calories": "熱量206kcal 脂肪15.6g 鈉416mg"
+  },
+  {
+    "name": "椒麻香辣熱狗",
+    "imgSrc": "public\\images\\711\\椒麻香辣熱狗.png",
+    "price": "35元",
+    "calories": "熱量190kcal 脂肪13.9g 鈉463mg"
+  },
+  {
+    "name": "美式原味熱狗",
+    "imgSrc": "public\\images\\711\\美式原味熱狗.png",
+    "price": "33元",
+    "calories": "熱量204kcal 脂肪16.6g 鈉437mg"
+  },
+  {
+    "name": "紐約客辣味熱狗",
+    "imgSrc": "public\\images\\711\\紐約客辣味熱狗.png",
+    "price": "35元",
+    "calories": "熱量233kcal 脂肪18.5g 鈉598mg"
+  },
+  {
+    "name": "三起司熱狗",
+    "imgSrc": "public\\images\\711\\三起司熱狗.png",
+    "price": "33元",
+    "calories": "熱量212kcal 脂肪16.9g 鈉449mg"
+  },
+  {
+    "name": "大亨堡麵包",
+    "imgSrc": "public\\images\\711\\大亨堡麵包.png",
+    "price": "12元",
+    "calories": "熱量177kcal 脂肪2.9g 鈉212mg"
+  }
+]

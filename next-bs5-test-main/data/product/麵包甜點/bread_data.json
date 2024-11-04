@@ -1,0 +1,620 @@
+[
+  {
+    "name": "起司Q彈球",
+    "imgSrc": "public\\images\\711\\起司Q彈球.png",
+    "price": "38元",
+    "calories": "熱量237kcal"
+  },
+  {
+    "name": "吉可頌-義式番茄乳酪巧巴達",
+    "imgSrc": "public\\images\\711\\吉可頌-義式番茄乳酪巧巴達.png",
+    "price": "45元",
+    "calories": "熱量566.1kcal"
+  },
+  {
+    "name": "起酥蛋糕",
+    "imgSrc": "public\\images\\711\\起酥蛋糕.png",
+    "price": "39元",
+    "calories": "熱量241kcal"
+  },
+  {
+    "name": "芒果卡士達鬆餅",
+    "imgSrc": "public\\images\\711\\芒果卡士達鬆餅.png",
+    "price": "39元",
+    "calories": "熱量253kcal"
+  },
+  {
+    "name": "亞尼克原味生乳捲",
+    "imgSrc": "public\\images\\711\\亞尼克原味生乳捲.png",
+    "price": "79元",
+    "calories": "熱量144kcal"
+  },
+  {
+    "name": "昂舒巴黎提拉米蘇泡芙",
+    "imgSrc": "public\\images\\711\\昂舒巴黎提拉米蘇泡芙.png",
+    "price": "59元",
+    "calories": "熱量215kcal"
+  },
+  {
+    "name": "春上蛋糕杯-黑糖撞奶",
+    "imgSrc": "public\\images\\711\\春上蛋糕杯-黑糖撞奶.png",
+    "price": "80元",
+    "calories": "熱量403.3kcal"
+  },
+  {
+    "name": "夢甜屋紅豆鮮奶油雙餡銅鑼燒",
+    "imgSrc": "public\\images\\711\\夢甜屋紅豆鮮奶油雙餡銅鑼燒.png",
+    "price": "69元",
+    "calories": "熱量208kcal"
+  },
+  {
+    "name": "吳寶春雞蛋布丁",
+    "imgSrc": "public\\images\\711\\吳寶春雞蛋布丁.png",
+    "price": "55元",
+    "calories": "熱量213kcal"
+  },
+  {
+    "name": "芋泥奶皇丹麥",
+    "imgSrc": "public\\images\\711\\芋泥奶皇丹麥.png",
+    "price": "49元",
+    "calories": "熱量289kcal"
+  },
+  {
+    "name": "芋泥玫瑰塔",
+    "imgSrc": "public\\images\\711\\芋泥玫瑰塔.png",
+    "price": "55元",
+    "calories": "熱量186.8kcal"
+  },
+  {
+    "name": "芋泥大福",
+    "imgSrc": "public\\images\\711\\芋泥大福.png",
+    "price": "39元",
+    "calories": "熱量151kcal"
+  },
+  {
+    "name": "連珍芋泥慕斯杯",
+    "imgSrc": "public\\images\\711\\連珍芋泥慕斯杯.png",
+    "price": "69元",
+    "calories": "熱量213kcal"
+  },
+  {
+    "name": "吉可頌-奶香布里歐",
+    "imgSrc": "public\\images\\711\\吉可頌-奶香布里歐.png",
+    "price": "39元",
+    "calories": "熱量315kcal"
+  },
+  {
+    "name": "吉可頌-榛果巧克力圓可頌",
+    "imgSrc": "public\\images\\711\\吉可頌-榛果巧克力圓可頌.png",
+    "price": "55元",
+    "calories": "熱量324kcal"
+  },
+  {
+    "name": "蠟筆小新蜜桃夾心方度乳酪蛋糕",
+    "imgSrc": "public\\images\\711\\蠟筆小新蜜桃夾心方度乳酪蛋糕.png",
+    "price": "59元",
+    "calories": "熱量122.4kcal"
+  },
+  {
+    "name": "紫醉金迷塔",
+    "imgSrc": "public\\images\\711\\紫醉金迷塔.png",
+    "price": "49元",
+    "calories": "熱量212kcal"
+  },
+  {
+    "name": "日本烤布蕾風味舒芙蕾夾心",
+    "imgSrc": "public\\images\\711\\日本烤布蕾風味舒芙蕾夾心.png",
+    "price": "65元",
+    "calories": "熱量178kcal"
+  },
+  {
+    "name": "日本烤布蕾風味爆餡泡芙",
+    "imgSrc": "public\\images\\711\\日本烤布蕾風味爆餡泡芙.png",
+    "price": "65元",
+    "calories": "熱量211kcal"
+  },
+  {
+    "name": "日本醜比頭白桃鮮奶油雙餡泡芙",
+    "imgSrc": "public\\images\\711\\日本醜比頭白桃鮮奶油雙餡泡芙.png",
+    "price": "75元",
+    "calories": "熱量146kcal"
+  },
+  {
+    "name": "日本醜比頭白桃Q皮銅鑼燒",
+    "imgSrc": "public\\images\\711\\日本醜比頭白桃Q皮銅鑼燒.png",
+    "price": "75元",
+    "calories": "熱量177kcal"
+  },
+  {
+    "name": "夢甜屋卡士達與鮮奶油雙餡泡芙",
+    "imgSrc": "public\\images\\711\\夢甜屋卡士達與鮮奶油雙餡泡芙.png",
+    "price": "69元",
+    "calories": "熱量187kcal"
+  },
+  {
+    "name": "北海道霜淇淋風味舒芙蕾鬆餅夾心",
+    "imgSrc": "public\\images\\711\\北海道霜淇淋風味舒芙蕾鬆餅夾心.png",
+    "price": "79元",
+    "calories": "熱量199kcal"
+  },
+  {
+    "name": "北海道霜淇淋風味閃電泡芙",
+    "imgSrc": "public\\images\\711\\北海道霜淇淋風味閃電泡芙.png",
+    "price": "69元",
+    "calories": "熱量192kcal"
+  },
+  {
+    "name": "LADEARS開心果達克瓦茲",
+    "imgSrc": "public\\images\\711\\LADEARS開心果達克瓦茲.png",
+    "price": "65元",
+    "calories": "熱量145.3kcal"
+  },
+  {
+    "name": "LADEARS紅烏龍達克瓦茲",
+    "imgSrc": "public\\images\\711\\LADEARS紅烏龍達克瓦茲.png",
+    "price": "65元",
+    "calories": "熱量145.8kcal"
+  },
+  {
+    "name": "LADEARS北海道生乳捲",
+    "imgSrc": "public\\images\\711\\LADEARS北海道生乳捲.png",
+    "price": "59元",
+    "calories": "熱量140kcal"
+  },
+  {
+    "name": "LADEARS檸檬老奶奶蛋糕",
+    "imgSrc": "public\\images\\711\\LADEARS檸檬老奶奶蛋糕.png",
+    "price": "49元",
+    "calories": "熱量194kcal"
+  },
+  {
+    "name": "LADEARS生乳半月燒",
+    "imgSrc": "public\\images\\711\\LADEARS生乳半月燒.png",
+    "price": "42元",
+    "calories": "熱量185kcal"
+  },
+  {
+    "name": "LADEARS爆餡羅馬生乳包",
+    "imgSrc": "public\\images\\711\\LADEARS爆餡羅馬生乳包.png",
+    "price": "65元",
+    "calories": "熱量260kcal"
+  },
+  {
+    "name": "LADEARS提拉米蘇蛋糕杯",
+    "imgSrc": "public\\images\\711\\LADEARS提拉米蘇蛋糕杯.png",
+    "price": "59元",
+    "calories": "熱量198kcal"
+  },
+  {
+    "name": "LADEARS巴斯克乳酪蛋糕",
+    "imgSrc": "public\\images\\711\\LADEARS巴斯克乳酪蛋糕.png",
+    "price": "55元",
+    "calories": "熱量210.3kcal"
+  },
+  {
+    "name": "LADEARS法式檸檬塔",
+    "imgSrc": "public\\images\\711\\LADEARS法式檸檬塔.png",
+    "price": "49元",
+    "calories": "熱量283kcal"
+  },
+  {
+    "name": "LADEARS焦糖德式布丁",
+    "imgSrc": "public\\images\\711\\LADEARS焦糖德式布丁.png",
+    "price": "49元",
+    "calories": "熱量270kcal"
+  },
+  {
+    "name": "起士公爵-高纖低糖起司餐包",
+    "imgSrc": "public\\images\\711\\起士公爵-高纖低糖起司餐包.png",
+    "price": "39元",
+    "calories": "熱量243kcal"
+  },
+  {
+    "name": "好時-巧克力小圓餅",
+    "imgSrc": "public\\images\\711\\好時-巧克力小圓餅.png",
+    "price": "35元",
+    "calories": "熱量179kcal"
+  },
+  {
+    "name": "好時-愛餡大亨巧克力軟法",
+    "imgSrc": "public\\images\\711\\好時-愛餡大亨巧克力軟法.png",
+    "price": "39元",
+    "calories": "熱量259kcal"
+  },
+  {
+    "name": "好時爆餡巧克力羅馬包",
+    "imgSrc": "public\\images\\711\\好時爆餡巧克力羅馬包.png",
+    "price": "55元",
+    "calories": "熱量161kcal"
+  },
+  {
+    "name": "竹葉堂黑糖蕨餅",
+    "imgSrc": "public\\images\\711\\竹葉堂黑糖蕨餅.png",
+    "price": "49元",
+    "calories": "熱量260kcal"
+  },
+  {
+    "name": "玉米脆片軟餅乾",
+    "imgSrc": "public\\images\\711\\玉米脆片軟餅乾.png",
+    "price": "35元",
+    "calories": "熱量312kcal"
+  },
+  {
+    "name": "金桃家黑糖卡士達大福",
+    "imgSrc": "public\\images\\711\\金桃家黑糖卡士達大福.png",
+    "price": "39元",
+    "calories": "熱量148kcal"
+  },
+  {
+    "name": "紅舞金韻",
+    "imgSrc": "public\\images\\711\\紅舞金韻.png",
+    "price": "49元",
+    "calories": "熱量88kcal"
+  },
+  {
+    "name": "昂舒巴黎卡士達奶霜泡芙",
+    "imgSrc": "public\\images\\711\\昂舒巴黎卡士達奶霜泡芙.png",
+    "price": "59元",
+    "calories": "熱量205kcal"
+  },
+  {
+    "name": "草莓奶霜鬆餅",
+    "imgSrc": "public\\images\\711\\草莓奶霜鬆餅.png",
+    "price": "39元",
+    "calories": "熱量269kcal"
+  },
+  {
+    "name": "芒果卡士達鬆餅",
+    "imgSrc": "public\\images\\711\\芒果卡士達鬆餅.png",
+    "price": "39元",
+    "calories": "熱量253kcal"
+  },
+  {
+    "name": "蜂蜜奶霜鬆餅",
+    "imgSrc": "public\\images\\711\\蜂蜜奶霜鬆餅.png",
+    "price": "39元",
+    "calories": "熱量300kcal"
+  },
+  {
+    "name": "起酥蛋糕",
+    "imgSrc": "public\\images\\711\\起酥蛋糕.png",
+    "price": "39元",
+    "calories": "熱量241kcal"
+  },
+  {
+    "name": "檸檬蛋糕",
+    "imgSrc": "public\\images\\711\\檸檬蛋糕.png",
+    "price": "39元",
+    "calories": "熱量309.5kcal"
+  },
+  {
+    "name": "蜜紅豆丹麥",
+    "imgSrc": "public\\images\\711\\蜜紅豆丹麥.png",
+    "price": "45元",
+    "calories": "熱量358kcal"
+  },
+  {
+    "name": "原味法式千層",
+    "imgSrc": "public\\images\\711\\原味法式千層.png",
+    "price": "69元",
+    "calories": "熱量238kcal"
+  },
+  {
+    "name": "一之軒-虎皮蛋糕",
+    "imgSrc": "public\\images\\711\\一之軒-虎皮蛋糕.png",
+    "price": "45元",
+    "calories": "熱量443kcal"
+  },
+  {
+    "name": "韓式Q彈球",
+    "imgSrc": "public\\images\\711\\韓式Q彈球.png",
+    "price": "39元",
+    "calories": "熱量261kcal"
+  },
+  {
+    "name": "黑丸BT21造型古早味蜂蜜紅茶凍",
+    "imgSrc": "public\\images\\711\\黑丸BT21造型古早味蜂蜜紅茶凍.png",
+    "price": "45元",
+    "calories": "熱量67.7kcal"
+  },
+  {
+    "name": "黑丸BT21造型仙草奶凍",
+    "imgSrc": "public\\images\\711\\黑丸BT21造型仙草奶凍.png",
+    "price": "45元",
+    "calories": "熱量69.6kcal"
+  },
+  {
+    "name": "抹茶紅豆捲餡土司",
+    "imgSrc": "public\\images\\711\\抹茶紅豆捲餡土司.png",
+    "price": "39元",
+    "calories": "熱量190kcal"
+  },
+  {
+    "name": "質有3希臘式優格(綜合莓果)",
+    "imgSrc": "public\\images\\711\\質有3希臘式優格(綜合莓果).png",
+    "price": "35元",
+    "calories": "熱量125.6kcal"
+  },
+  {
+    "name": "質有3希臘式優格(藍莓葡萄)",
+    "imgSrc": "public\\images\\711\\質有3希臘式優格(藍莓葡萄).png",
+    "price": "35元",
+    "calories": "熱量124.2kcal"
+  },
+  {
+    "name": "植物の優蜂蜜草莓兩入組",
+    "imgSrc": "public\\images\\711\\植物の優蜂蜜草莓兩入組.png",
+    "price": "70元",
+    "calories": "熱量242kcal"
+  },
+  {
+    "name": "福樂Q果蜂蜜柚香優酪135G",
+    "imgSrc": "public\\images\\711\\福樂Q果蜂蜜柚香優酪135G.png",
+    "price": "35元",
+    "calories": "熱量99kcal"
+  },
+  {
+    "name": "福樂Q果葡萄奇異果優酪135G",
+    "imgSrc": "public\\images\\711\\福樂Q果葡萄奇異果優酪135G.png",
+    "price": "35元",
+    "calories": "熱量106kcal"
+  },
+  {
+    "name": "福樂奇亞籽燕麥草莓優酪150G",
+    "imgSrc": "public\\images\\711\\福樂奇亞籽燕麥草莓優酪150G.png",
+    "price": "35元",
+    "calories": "熱量113kcal"
+  },
+  {
+    "name": "馬修嚴選原味鮮乳優格",
+    "imgSrc": "public\\images\\711\\馬修嚴選原味鮮乳優格.png",
+    "price": "45元",
+    "calories": "熱量63kcal"
+  },
+  {
+    "name": "馬修嚴選藍莓鮮乳優格",
+    "imgSrc": "public\\images\\711\\馬修嚴選藍莓鮮乳優格.png",
+    "price": "45元",
+    "calories": "熱量80kcal"
+  },
+  {
+    "name": "木曜-紫米紅豆高纖軟歐",
+    "imgSrc": "public\\images\\711\\木曜-紫米紅豆高纖軟歐.png",
+    "price": "45元",
+    "calories": "熱量427kcal"
+  },
+  {
+    "name": "愛餡大亨-煉乳牛奶",
+    "imgSrc": "public\\images\\711\\愛餡大亨-煉乳牛奶.png",
+    "price": "35元",
+    "calories": "熱量293kcal"
+  },
+  {
+    "name": "愛餡大亨-爆漿菠蘿",
+    "imgSrc": "public\\images\\711\\愛餡大亨-爆漿菠蘿.png",
+    "price": "42元",
+    "calories": "熱量393kcal"
+  },
+  {
+    "name": "質立推健希臘式優格-2重蛋白",
+    "imgSrc": "public\\images\\711\\質立推健希臘式優格-2重蛋白.png",
+    "price": "38元",
+    "calories": "熱量168kcal"
+  },
+  {
+    "name": "質立推健希臘式優格-2重纖維",
+    "imgSrc": "public\\images\\711\\質立推健希臘式優格-2重纖維.png",
+    "price": "38元",
+    "calories": "熱量145kcal"
+  },
+  {
+    "name": "盛香珍寒天雙層凍(蜜柑+優格)",
+    "imgSrc": "public\\images\\711\\盛香珍寒天雙層凍(蜜柑+優格).png",
+    "price": "40元",
+    "calories": "熱量178kcal"
+  },
+  {
+    "name": "卡士達半月燒",
+    "imgSrc": "public\\images\\711\\卡士達半月燒.png",
+    "price": "39元",
+    "calories": "熱量181.6kcal"
+  },
+  {
+    "name": "地瓜高纖軟歐",
+    "imgSrc": "public\\images\\711\\地瓜高纖軟歐.png",
+    "price": "45元",
+    "calories": "熱量580kcal"
+  },
+  {
+    "name": "日式麻糬泡芙",
+    "imgSrc": "public\\images\\711\\日式麻糬泡芙.png",
+    "price": "49元",
+    "calories": "熱量143kcal"
+  },
+  {
+    "name": "OPEN-巧克力QQ球",
+    "imgSrc": "public\\images\\711\\OPEN-巧克力QQ球.png",
+    "price": "39元",
+    "calories": "熱量328.2kcal"
+  },
+  {
+    "name": "OPEN-香濃牛奶我最棒",
+    "imgSrc": "public\\images\\711\\OPEN-香濃牛奶我最棒.png",
+    "price": "30元",
+    "calories": "熱量317kcal"
+  },
+  {
+    "name": "高鐵-迷你巧克力捲",
+    "imgSrc": "public\\images\\711\\高鐵-迷你巧克力捲.png",
+    "price": "25元",
+    "calories": "熱量231kcal"
+  },
+  {
+    "name": "乳酪核桃軟歐",
+    "imgSrc": "public\\images\\711\\乳酪核桃軟歐.png",
+    "price": "45元",
+    "calories": "熱量392.8kcal"
+  },
+  {
+    "name": "巧克力雙色土司",
+    "imgSrc": "public\\images\\711\\巧克力雙色土司.png",
+    "price": "30元",
+    "calories": "熱量179kcal"
+  },
+  {
+    "name": "春上蛋糕杯-香濃芋泥",
+    "imgSrc": "public\\images\\711\\春上蛋糕杯-香濃芋泥.png",
+    "price": "79元",
+    "calories": "熱量472kcal"
+  },
+  {
+    "name": "春上蛋糕杯-濃情重巧克力",
+    "imgSrc": "public\\images\\711\\春上蛋糕杯-濃情重巧克力.png",
+    "price": "79元",
+    "calories": "熱量432.9kcal"
+  },
+  {
+    "name": "好農好濃鮮奶泡芙",
+    "imgSrc": "public\\images\\711\\好農好濃鮮奶泡芙.png",
+    "price": "55元",
+    "calories": "熱量168kcal"
+  },
+  {
+    "name": "三福鮮奶烤布丁",
+    "imgSrc": "public\\images\\711\\三福鮮奶烤布丁.png",
+    "price": "45元",
+    "calories": "熱量175kcal"
+  },
+  {
+    "name": "黑丸仙草吸凍飲",
+    "imgSrc": "public\\images\\711\\黑丸仙草吸凍飲.png",
+    "price": "35元",
+    "calories": "熱量99.6kcal"
+  },
+  {
+    "name": "OPEN!雙葡萄吸凍飲PP220",
+    "imgSrc": "public\\images\\711\\OPEN!雙葡萄吸凍飲PP220.png",
+    "price": "39元",
+    "calories": "熱量147.8kcal"
+  },
+  {
+    "name": "OPEN!蜂蜜檸檬吸凍飲PP220",
+    "imgSrc": "public\\images\\711\\OPEN!蜂蜜檸檬吸凍飲PP220.png",
+    "price": "39元",
+    "calories": "熱量    142.6　kcal"
+  },
+  {
+    "name": "原之果實小蜜柑鮮果凍",
+    "imgSrc": "public\\images\\711\\原之果實小蜜柑鮮果凍.png",
+    "price": "59元",
+    "calories": "熱量204kcal"
+  },
+  {
+    "name": "優菓甜坊泰奶布丁",
+    "imgSrc": "public\\images\\711\\優菓甜坊泰奶布丁.png",
+    "price": "49元",
+    "calories": "熱量100.1kcal"
+  },
+  {
+    "name": "晶典小品-茉莉茶凍",
+    "imgSrc": "public\\images\\711\\晶典小品-茉莉茶凍.png",
+    "price": "25元",
+    "calories": "熱量85.6kcal"
+  },
+  {
+    "name": "優菓甜坊杏仁豆腐",
+    "imgSrc": "public\\images\\711\\優菓甜坊杏仁豆腐.png",
+    "price": "40元",
+    "calories": "熱量132kcal"
+  },
+  {
+    "name": "優菓甜坊楊枝甘露",
+    "imgSrc": "public\\images\\711\\優菓甜坊楊枝甘露.png",
+    "price": "65元",
+    "calories": "熱量190kcal"
+  },
+  {
+    "name": "優菓甜坊黑糖檸檬愛玉",
+    "imgSrc": "public\\images\\711\\優菓甜坊黑糖檸檬愛玉.png",
+    "price": "40元",
+    "calories": "熱量158.4kcal"
+  },
+  {
+    "name": "優菓甜坊蒟蒻薏仁綠豆湯",
+    "imgSrc": "public\\images\\711\\優菓甜坊蒟蒻薏仁綠豆湯.png",
+    "price": "49元",
+    "calories": "熱量207.8kcal"
+  },
+  {
+    "name": "優菓甜坊可可玉米片鮮奶酪",
+    "imgSrc": "public\\images\\711\\優菓甜坊可可玉米片鮮奶酪.png",
+    "price": "40元",
+    "calories": "熱量161.2kcal"
+  },
+  {
+    "name": "優菓甜坊黑糖豆花",
+    "imgSrc": "public\\images\\711\\優菓甜坊黑糖豆花.png",
+    "price": "40元",
+    "calories": "熱量164.6kcal"
+  },
+  {
+    "name": "優菓甜坊摩摩喳喳甜湯",
+    "imgSrc": "public\\images\\711\\優菓甜坊摩摩喳喳甜湯.png",
+    "price": "65元",
+    "calories": "熱量250.3kcal"
+  },
+  {
+    "name": "優菓甜坊仙草凍",
+    "imgSrc": "public\\images\\711\\優菓甜坊仙草凍.png",
+    "price": "40元",
+    "calories": "熱量137.8kcal"
+  },
+  {
+    "name": "優菓甜坊銀耳蓮子湯",
+    "imgSrc": "public\\images\\711\\優菓甜坊銀耳蓮子湯.png",
+    "price": "59元",
+    "calories": "熱量141.8kcal"
+  },
+  {
+    "name": "起司丹麥菠蘿",
+    "imgSrc": "public\\images\\711\\起司丹麥菠蘿.png",
+    "price": "45元",
+    "calories": "熱量286kcal"
+  },
+  {
+    "name": "奶油手撕餐包",
+    "imgSrc": "public\\images\\711\\奶油手撕餐包.png",
+    "price": "30元",
+    "calories": "熱量317kcal"
+  },
+  {
+    "name": "丹麥土司",
+    "imgSrc": "public\\images\\711\\丹麥土司.png",
+    "price": "39元",
+    "calories": "熱量368kcal"
+  },
+  {
+    "name": "丹麥起司火腿",
+    "imgSrc": "public\\images\\711\\丹麥起司火腿.png",
+    "price": "35元",
+    "calories": "熱量396kcal"
+  },
+  {
+    "name": "蛋黃奶香麵包",
+    "imgSrc": "public\\images\\711\\蛋黃奶香麵包.png",
+    "price": "25元",
+    "calories": "熱量310kcal"
+  },
+  {
+    "name": "芋香麵包",
+    "imgSrc": "public\\images\\711\\芋香麵包.png",
+    "price": "35元",
+    "calories": "熱量314kcal"
+  },
+  {
+    "name": "三起司布里歐",
+    "imgSrc": "public\\images\\711\\三起司布里歐.png",
+    "price": "35元",
+    "calories": "熱量282kcal"
+  }
+]
