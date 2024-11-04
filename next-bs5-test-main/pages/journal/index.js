@@ -1,5 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
+
+import JournalBigbite from './journal-bigbite'
 export default function Journal() {
   return (
     <>
@@ -31,10 +33,10 @@ export default function Journal() {
         </div>
 
         {/* 食品list, 計算結果(存儲功能) */}
-        {/* 需要欄位 食物name, 熱量, 日期 */}
+        {/* 需要欄位 食物name, 熱量, 備註, 日期 */}
         <div className="row" style={{ height: '600px' }}>
-          <div className="col-9" style={{ background: 'orange' }}>
-            <p>食品list內容</p>
+          <div className="col-9" style={{ background: '' }}>
+            <JournalBigbite />
           </div>
           <div className="col-3" style={{ background: 'blue' }}>
             <p>計算內容</p>

@@ -1,121 +1,121 @@
 [
   {
     "name": "壹番屋-炸雞排起司咖哩焗飯",
-    "imgSrc": "public\\images\\711\\壹番屋-炸雞排起司咖哩焗飯.png",
+    "imgSrc": "壹番屋-炸雞排起司咖哩焗飯.png",
     "price": "99元",
     "calories": "熱量657kcal"
   },
   {
     "name": "星宇航空-雙醬雞排咖哩飯",
-    "imgSrc": "public\\images\\711\\星宇航空-雙醬雞排咖哩飯.png",
+    "imgSrc": "星宇航空-雙醬雞排咖哩飯.png",
     "price": "99元",
     "calories": "熱量764kcal"
   },
   {
     "name": "香炸豬排歐姆蛋咖哩飯",
-    "imgSrc": "public\\images\\711\\香炸豬排歐姆蛋咖哩飯.png",
+    "imgSrc": "香炸豬排歐姆蛋咖哩飯.png",
     "price": "99元",
     "calories": "熱量727kcal"
   },
   {
     "name": "歐姆蛋牛肉咖哩飯",
-    "imgSrc": "public\\images\\711\\歐姆蛋牛肉咖哩飯.png",
+    "imgSrc": "歐姆蛋牛肉咖哩飯.png",
     "price": "99元",
     "calories": "熱量720kcal"
   },
   {
     "name": "歐姆蛋包飯",
-    "imgSrc": "public\\images\\711\\歐姆蛋包飯.png",
+    "imgSrc": "歐姆蛋包飯.png",
     "price": "89元",
     "calories": "熱量800kcal"
   },
   {
     "name": "咖哩雞排焗飯",
-    "imgSrc": "public\\images\\711\\咖哩雞排焗飯.png",
+    "imgSrc": "咖哩雞排焗飯.png",
     "price": "99元",
     "calories": "熱量770kcal"
   },
   {
     "name": "木曜-黑胡椒鐵板豆腐餐盒",
-    "imgSrc": "public\\images\\711\\木曜-黑胡椒鐵板豆腐餐盒.png",
+    "imgSrc": "木曜-黑胡椒鐵板豆腐餐盒.png",
     "price": "99元",
     "calories": "熱量618kcal"
   },
   {
     "name": "增雞蛋白餐",
-    "imgSrc": "public\\images\\711\\增雞蛋白餐.png",
+    "imgSrc": "增雞蛋白餐.png",
     "price": "99元",
     "calories": "熱量595kcal"
   },
   {
     "name": "菠菜起司烤雞紅藜糯麥飯",
-    "imgSrc": "public\\images\\711\\菠菜起司烤雞紅藜糯麥飯.png",
+    "imgSrc": "菠菜起司烤雞紅藜糯麥飯.png",
     "price": "99元",
     "calories": "熱量411kcal"
   },
   {
     "name": "21Plus香草烤雞腿時蔬餐",
-    "imgSrc": "public\\images\\711\\21Plus香草烤雞腿時蔬餐.png",
+    "imgSrc": "21Plus香草烤雞腿時蔬餐.png",
     "price": "89元",
     "calories": "熱量430kcal"
   },
   {
     "name": "香烤雞胸鮮蔬餐",
-    "imgSrc": "public\\images\\711\\香烤雞胸鮮蔬餐.png",
+    "imgSrc": "香烤雞胸鮮蔬餐.png",
     "price": "89元",
     "calories": "熱量374kcal"
   },
   {
     "name": "牛角-炭烤牛燒肉便當",
-    "imgSrc": "public\\images\\711\\牛角-炭烤牛燒肉便當.png",
+    "imgSrc": "牛角-炭烤牛燒肉便當.png",
     "price": "99元",
     "calories": "熱量591kcal"
   },
   {
     "name": "牛角-炙燒雙拼便當",
-    "imgSrc": "public\\images\\711\\牛角-炙燒雙拼便當.png",
+    "imgSrc": "牛角-炙燒雙拼便當.png",
     "price": "99元",
     "calories": "熱量614kcal"
   },
   {
     "name": "黃金炸豬排玉子丼",
-    "imgSrc": "public\\images\\711\\黃金炸豬排玉子丼.png",
+    "imgSrc": "黃金炸豬排玉子丼.png",
     "price": "99元",
     "calories": "熱量629kcal"
   },
   {
     "name": "一鍋燒-滑蛋嫩雞親子丼",
-    "imgSrc": "public\\images\\711\\一鍋燒-滑蛋嫩雞親子丼.png",
+    "imgSrc": "一鍋燒-滑蛋嫩雞親子丼.png",
     "price": "89元",
     "calories": "熱量535kcal"
   },
   {
     "name": "日式佛蒙特咖哩雞肉飯",
-    "imgSrc": "public\\images\\711\\日式佛蒙特咖哩雞肉飯.png",
+    "imgSrc": "日式佛蒙特咖哩雞肉飯.png",
     "price": "89元",
     "calories": "熱量795kcal"
   },
   {
     "name": "日式辛香豬肉咖哩飯",
-    "imgSrc": "public\\images\\711\\日式辛香豬肉咖哩飯.png",
+    "imgSrc": "日式辛香豬肉咖哩飯.png",
     "price": "89元",
     "calories": "熱量737kcal"
   },
   {
     "name": "泰式椰汁綠咖哩雞肉飯(辣)",
-    "imgSrc": "public\\images\\711\\泰式椰汁綠咖哩雞肉飯(辣).png",
+    "imgSrc": "泰式椰汁綠咖哩雞肉飯(辣).png",
     "price": "89元",
     "calories": "熱量664kcal"
   },
   {
     "name": "真飽牛丼",
-    "imgSrc": "public\\images\\711\\真飽牛丼.png",
+    "imgSrc": "真飽牛丼.png",
     "price": "85元",
     "calories": "熱量753kcal"
   },
   {
     "name": "爪哇咖哩飯",
-    "imgSrc": "public\\images\\711\\爪哇咖哩飯.png",
+    "imgSrc": "爪哇咖哩飯.png",
     "price": "70元",
     "calories": "熱量775kcal"
   }
