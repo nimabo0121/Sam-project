@@ -85,13 +85,18 @@ const FriendList = () => {
 
   return (
     <div>
-      <h2>好友請求</h2>
+      <h3>好友邀請</h3>
       {pendingRequests.length === 0 ? (
         <p>沒有好友請求</p>
       ) : (
-        <ul>
-          {pendingRequests.map((request) => (
-            <tr key={request.id}>
+        <div className='mx-2'>
+          {pendingRequests.map((request, i) => (
+            <div key={request.id} style={styles.header}>
+              <img
+                src={`http://localhost:3005/avatar/${request.avatar}`}
+                alt={`${request.avatar} 頭像`}
+                style={styles.avatar}
+              />
               {request.name}{' '}
               {request.status === 'pending' && (
                 <>
@@ -103,12 +108,23 @@ const FriendList = () => {
                   </button>
                 </>
               )}
-            </tr>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   )
 }
-
+const styles ={
+  avatar: {
+    width: '35px',
+    height: '35px',
+    borderRadius: '50%',
+    margin: '2px 5px',
+  },
+  header: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+}
 export default FriendList

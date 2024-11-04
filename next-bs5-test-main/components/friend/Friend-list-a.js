@@ -42,7 +42,7 @@ const FriendListA = ({ onChatOpen }) => {
 
   return (
     <div>
-      <h2>好友列表</h2>
+      <h3>好友列表</h3>
       {acceptedRequests.length === 0 ? (
         <p>目前沒有好友</p>
       ) : (

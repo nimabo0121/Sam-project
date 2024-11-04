@@ -20,7 +20,7 @@ router.post('/accept', authenticate, async (req, res) => {
     // 查找狀態為 'pending' 的好友請求
     const [friendRequest] = await sequelize.query(
       `
-      SELECT * FROM friends
+     SELECT * FROM friends
       WHERE user_id = ? AND friend_id = ? AND status = 'pending'
       `,
       {
@@ -165,7 +165,7 @@ router.get('/pending', authenticate, async (req, res) => {
     // 查詢好友請求狀態為 'pending' 的好友記錄
     const [pendingRequests] = await sequelize.query(
       `
-      SELECT u.id, u.name, f.status 
+      SELECT u.id, u.name, u.avatar, f.status 
       FROM friends f
       JOIN user u ON f.user_id = u.id
       WHERE f.friend_id = ? AND f.status = 'pending'

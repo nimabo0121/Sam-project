@@ -43,7 +43,10 @@ export default function DefaultLayout({ title = 'Next-BS5', children }) {
           {/* {console.log("auth 狀態: ", auth)} */}
           {auth.isAuth && <FriendNavbar onChatOpen={openChat} />}
 
-          <div className="content-wrapper container" style={{ zIndex: '999' }}>
+          <div
+            className="content-wrapper container pt-2"
+            style={{ zIndex: '999' }}
+          >
             {children}
           </div>
 
