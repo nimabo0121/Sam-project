@@ -59,31 +59,6 @@ export default async function (sequelize) {
         type: DataTypes.TEXT,
         allowNull: true,
       },
-      // 收件者1資訊
-      name1: {
-        type: DataTypes.STRING, // 收件者姓名
-        allowNull: true,
-      },
-      phone1: {
-        type: DataTypes.STRING, // 收件者電話
-        allowNull: true,
-      },
-      zip1: {
-        type: DataTypes.STRING, // 郵遞區號
-        allowNull: true,
-      },
-      county1: {
-        type: DataTypes.STRING, // 縣/市
-        allowNull: true,
-      },
-      district1: {
-        type: DataTypes.STRING, // 地區
-        allowNull: true,
-      },
-      address1: {
-        type: DataTypes.STRING, // 地址
-        allowNull: true,
-      },
     },
     {
       hooks: {

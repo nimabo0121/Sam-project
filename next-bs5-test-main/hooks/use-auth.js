@@ -1,7 +1,7 @@
 import React, { useState, useContext, createContext, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import axiosInstance from '@/services/axios-instance'
-import { checkAuth, getFavs } from '@/services/user'
+import { checkAuth } from '@/services/user'
 
 const AuthContext = createContext(null)
 
@@ -46,28 +46,6 @@ export const AuthProvider = ({ children }) => {
     isAuth: false,
     userData: initUserData,
   })
-
-  // 我的最愛清單使用
-  const [favorites, setFavorites] = useState([])
-
-  // 得到我的最愛
-  const handleGetFavorites = async () => {
-    const res = await getFavs()
-    //console.log(res.data)
-    if (res.data.status === 'success') {
-      setFavorites(res.data.data.favorites)
-    }
-  }
-
-  useEffect(() => {
-    if (auth.isAuth) {
-      // 成功登入後要執行一次向伺服器取得我的最愛清單
-      handleGetFavorites()
-    } else {
-      // 登出時要設回空陣列
-      setFavorites([])
-    }
-  }, [auth])
 
   const router = useRouter()
 
@@ -124,8 +102,6 @@ export const AuthProvider = ({ children }) => {
       value={{
         auth,
         setAuth,
-        favorites,
-        setFavorites,
       }}
     >
       {children}
