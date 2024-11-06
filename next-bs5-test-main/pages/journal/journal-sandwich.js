@@ -2,9 +2,10 @@ import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 
 // data
-import bigbite from '@/data/product/大亨堡/Bigbite_data.json'
+import bigbite from '@/data/product/原賞/sandwich_data.json'
+import { entries } from 'lodash'
 
-export default function JournalBigbite({ onSelectItem }) {
+export default function JournalSandwich({ onSelectItem }) {
   const [items, setItems] = useState(bigbite.slice(0, 10)) // 初始顯示10項
   const [hasMore, setHasMore] = useState(true) // 加載... false 停止加載
 
