@@ -1,6 +1,13 @@
 import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+import ChartNavbar from '@/components/layout/default-layout/my-navbar/chart-navbar'
+import ChartYear from './chart-year'
+import ChartSeason from './chart-season'
+import ChartMonth from './chart-month'
+import ChartWeek from './chart-week'
+import ChartDay from './chart-day'
+
 import JournalNavbar from '@/components/layout/default-layout/my-navbar/journal-navbar'
 import JournalBigbite from './journal-bigbite'
 import JournalCuisine from './journal-cuisine'
@@ -15,7 +22,8 @@ import JournalCalculation from './journal-calculation'
 
 export default function Journal() {
   // 追蹤當前顯示的組件索引
-  const [activeComponentIndex, setActiveComponentIndex] = useState(0)
+  const [activeIntervalIndex, setActiveIntervalIndex] = useState(0)
+  const [activeFoodIndex, setActiveFoodIndex] = useState(0)
   const [selectedItems, setSelectedItems] = useState([]) // 儲存選取的項目
 
   // 處理圖片點選事件，支持多選
@@ -28,6 +36,29 @@ export default function Journal() {
       return [...prevItems, item]
     })
   }
+
+  const intervals = [
+    {
+      name: '年',
+      intervals: <ChartYear />,
+    },
+    // {
+    //   name: '季',
+    //   intervals: <ChartSeason />,
+    // },
+    {
+      name: '月',
+      intervals: <ChartMonth />,
+    },
+    {
+      name: '周',
+      intervals: <ChartWeek />,
+    },
+    // {
+    //   name: '日',
+    //   intervals: <ChartDay />,
+    // },
+  ]
 
   const components = [
     {
@@ -71,25 +102,23 @@ export default function Journal() {
   return (
     <>
       <div className="container pt-5">
-        <div
-          className="row"
-          style={{ color: 'black', background: '#cccccc', height: '350px' }}
-        >
-          <p style={{ color: 'black', background: 'red', height: '10%' }}>
-            年/3月/月/周/日navbar
-          </p>
-          <div className="row">紀錄向量表</div>
+        <div className="row" style={{ background: '#cccccc', height: '400px' }}>
+          <div style={{ height: '10%' }}>
+            <ChartNavbar
+              intervals={intervals}
+              setActiveComponentIndex={setActiveIntervalIndex}
+            />
+          </div>
+          <div className="row"> {intervals[activeIntervalIndex].intervals}</div>
         </div>
 
-        <div className="row" style={{ height: '50px' }}>
-          <div
-            className="col-9"
-            style={{ color: 'pink', background: '#eeeeee' }}
-          >
+        <div className="row pt-3" style={{ height: '50px' }}>
+          <div className="col-9">
             <h3>
               <JournalNavbar
                 components={components}
-                setActiveComponentIndex={setActiveComponentIndex}
+                setActiveComponentIndex={setActiveFoodIndex}
+                activeComponentIndex={activeFoodIndex} // 傳遞當前選擇的索引
               />
             </h3>
           </div>
@@ -102,11 +131,17 @@ export default function Journal() {
         </div>
 
         {/* 食品list, 計算結果(存儲功能) */}
-        <div className="row" style={{ height: '600px' }}>
-          <div className="col-9">
-            {components[activeComponentIndex].component}
-          </div>
-          <div className="col-3" style={{margin:"0px", border:"0px", padding:"0px", background:"#cccccc"}}>
+        <div className="row pt-2" style={{ height: '600px' }}>
+          <div className="col-9">{components[activeFoodIndex].component}</div>
+          <div
+            className="col-3"
+            style={{
+              margin: '0px',
+              border: '0px',
+              padding: '4px',
+              background: '#cccccc',
+            }}
+          >
             <JournalCalculation selectedItems={selectedItems} />
           </div>
         </div>

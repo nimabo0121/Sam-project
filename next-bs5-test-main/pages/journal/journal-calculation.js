@@ -1,16 +1,70 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react'
+import axios from 'axios'
 
 export default function JournalCalculation({ selectedItems }) {
+  const [notes, setNotes] = useState('')
+  const [recordDate, setRecordDate] = useState(() => {
+    const localDate = new Date()
+    return localDate.toLocaleDateString('zh-TW') // 使用本地時區格式化日期
+  })
+  const [successMessage, setSuccessMessage] = useState('') // 成功訊提通知
+
   // 計算總熱量（僅在 selectedItems 更新時計算）
   const totalCalories = useMemo(() => {
     return selectedItems.reduce((total, item) => {
-      const calories = parseInt(item.calories, 10); // 假設熱量為數字開頭
-      return total + (isNaN(calories) ? 0 : calories);
-    }, 0);
-  }, [selectedItems]); // 依賴於 selectedItems，只有在 selectedItems 改變時才重新計算
+      const calories = parseInt(item.calories.replace('kcal', '').trim(), 10)
+      return total + (isNaN(calories) ? 0 : calories)
+    }, 0)
+  }, [selectedItems])
+
+  // 處理備註輸入
+  const handleNotesChange = (e) => {
+    setNotes(e.target.value)
+  }
+
+  // 儲存健康日記
+  const handleSave = async () => {
+    try {
+      const response = await axios.post(
+        'http://localhost:3005/api/healthy',
+        {
+          items: selectedItems.map((item) => ({
+            name: item.name,
+            calories: item.calories,
+            sum: parseInt(item.calories.replace('kcal', '').trim(), 10), // 每個食物的熱量數字
+          })),
+          notes: notes,
+          recordDate: recordDate, // 使用本地日期
+        },
+        {
+          withCredentials: true, // 請求攜帶 cookies
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      )
+
+      if (response.status !== 201) {
+        throw new Error('儲存失敗')
+      }
+
+      setSuccessMessage('健康日記已儲存')
+      // 3秒隱藏
+      setTimeout(() => {
+        setSuccessMessage('')
+      }, 2000)
+    } catch (error) {
+      console.error('Error:', error)
+      setSuccessMessage('儲存過程中發生錯誤')
+      // 3秒隱藏
+      setTimeout(() => {
+        setSuccessMessage('')
+      }, 2000)
+    }
+  }
 
   return (
-    <div style={{margin:"0px", border:"0px", padding:"0px"}}>
+    <form>
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr>
@@ -27,13 +81,17 @@ export default function JournalCalculation({ selectedItems }) {
                   transition: 'background-color 0.2s ease',
                   cursor: 'pointer',
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#f0f8ff')}
-                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.backgroundColor = '#f0f8ff')
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.backgroundColor = 'transparent')
+                }
               >
                 <td
                   style={{
-                    wordBreak: 'break-word', // 換行處理
-                    maxWidth: '160px', // 控制單元格寬度
+                    wordBreak: 'break-word',
+                    maxWidth: '160px',
                   }}
                 >
                   {item.name}
@@ -52,6 +110,37 @@ export default function JournalCalculation({ selectedItems }) {
           </tr>
         </tbody>
       </table>
-    </div>
-  );
+
+      <div className="mb-3">
+        <label htmlFor="exampleFormControlTextarea1" className="form-label">
+          備註
+        </label>
+        <textarea
+          className="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+          value={notes}
+          onChange={handleNotesChange}
+        ></textarea>
+      </div>
+
+      <button
+        type="button"
+        className="btn btn-outline-secondary"
+        onClick={handleSave}
+      >
+        儲存
+      </button>
+      {successMessage && (
+        <span
+          style={{
+            marginTop: '15px',
+            color: successMessage.includes('錯誤') ? 'red' : 'green',
+          }}
+        >
+          {successMessage}
+        </span>
+      )}
+    </form>
+  )
 }
