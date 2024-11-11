@@ -28,12 +28,14 @@ export default function ChartWeek() {
   const [error, setError] = useState(null)
   const [totalCalories, setTotalCalories] = useState(0)
   const [totalProtein, setTotalProtein] = useState(0)
+  const [weekOffset, setWeekOffset] = useState(0) // 新增週次偏移量
 
   const currentDate = new Date()
   const currentDay = currentDate.getDate()
   const currentMonth = currentDate.getMonth()
   const currentYear = currentDate.getFullYear()
 
+  // 計算週日期範圍
   const getWeekDateRange = () => {
     const dayOfWeek = currentDate.getDay()
     const diffToSunday = dayOfWeek === 0 ? 0 : 7 - dayOfWeek
@@ -41,7 +43,7 @@ export default function ChartWeek() {
     const endDate = new Date(
       currentYear,
       currentMonth,
-      currentDay + diffToSunday
+      currentDay + diffToSunday + weekOffset * 7
     )
     const startDate = new Date(endDate)
     startDate.setDate(endDate.getDate() - 6)
@@ -58,7 +60,6 @@ export default function ChartWeek() {
 
   const { startDate, endDate } = getWeekDateRange()
 
-  // 生成一周完整的日期列表
   const generateWeekDates = (start, end) => {
     const dates = []
     const current = new Date(start)
@@ -75,6 +76,7 @@ export default function ChartWeek() {
   }
 
   useEffect(() => {
+    setLoading(true)
     axios
       .get('http://localhost:3005/api/healthy/records', {
         params: {
@@ -115,9 +117,39 @@ export default function ChartWeek() {
   if (loading) return <div>Loading...</div>
   if (error) return <div>Error: {error}</div>
   if (!Array.isArray(weekData) || weekData.length === 0)
-    return <div>本周無數據</div>
-  console.log(weekData)
-  // 補全缺失的日期資料
+    return (
+      <div className="container" style={{ height: '350px', width: '100%' }}>
+        <div className="row" style={{ height: '24px' }}>
+          <div className="col-4">
+            {/* <strong>
+              本周總熱量：{totalCalories} kcal / 蛋白質：{totalProtein} g
+            </strong> */}
+          </div>
+
+          <div className="col-4 text-center">
+            <button
+              className="btn btn-sm"
+              onClick={() => setWeekOffset((prev) => prev - 1)}
+            >
+              上一週
+            </button>
+            <strong className="">
+              {startDate} - {endDate}
+            </strong>
+            <button
+              className="btn btn-sm"
+              onClick={() => setWeekOffset((prev) => prev + 1)}
+            >
+              下一週
+            </button>
+          </div>
+          
+        <div className="col-4"></div>
+        </div>
+        <div>本周無數據...</div>
+      </div>
+    )
+
   const weekDates = generateWeekDates(startDate, endDate)
   const aggregatedData = weekDates.map((date) => {
     const dayData = weekData.filter((item) => item.batch_date === date)
@@ -143,7 +175,7 @@ export default function ChartWeek() {
         label: '每日蛋白質 (g)',
         data: aggregatedData.map((item) => item.totalProtein),
         fill: false,
-        borderColor: 'red',
+        borderColor: 'rgb(153, 102, 255)',
         tension: 0.1,
       },
     ],
@@ -184,12 +216,34 @@ export default function ChartWeek() {
   }
 
   return (
-    <div style={{ height: '350px', width: '100%' }}>
-      <div>
-        <strong>
-          本周總熱量：{totalCalories} kcal / 蛋白質：{totalProtein} g
-        </strong>
+    <div className="container" style={{ height: '350px', width: '100%' }}>
+      <div className="row" style={{ height: '24px' }}>
+        <div className="col-4">
+          <strong>
+            本周總熱量：{totalCalories} kcal / 蛋白質：{totalProtein} g
+          </strong>
+        </div>
+
+        <div className="col-4 text-center">
+          <button
+            className="btn btn-sm"
+            onClick={() => setWeekOffset((prev) => prev - 1)}
+          >
+            上一週
+          </button>
+          <strong className="">
+            {startDate} - {endDate}
+          </strong>
+          <button
+            className="btn btn-sm"
+            onClick={() => setWeekOffset((prev) => prev + 1)}
+          >
+            下一週
+          </button>
+        </div>
+        <div className="col-4"></div>
       </div>
+
       <Line data={chartData} options={chartOptions} />
     </div>
   )
