@@ -129,7 +129,6 @@ router.get('/:id', authenticate, async function (req, res) {
     return res.json({ status: 'error', message: '獲取資料出錯' })
   }
 })
-
 // POST - 新增會員資料
 router.post('/', async function (req, res) {
   // req.body資料範例
@@ -179,10 +178,24 @@ router.post('/', async function (req, res) {
     return res.json({ status: 'error', message: '建立會員失敗' })
   }
 
+  // 新增標籤資料到 batch_label 表
+  try {
+    // 創建三個標籤（早中晚餐）
+    const labels = ['早餐', '中餐', '晚餐']
+    for (const label of labels) {
+      await sequelize.query(
+        'INSERT INTO batch_label (label_id, label_name) VALUES (?, ?)',
+        {
+          replacements: [user.id, label],
+        }
+      )
+    }
+    console.log('標籤資料已新增至 batch_label 資料表')
+  } catch (error) {
+    console.error('新增標籤資料錯誤:', error)
+  }
+
   // 成功建立會員的回應
-  // 狀態`201`是建立資料的標準回應，
-  // 如有必要可以加上`Location`會員建立的uri在回應標頭中，或是回應剛建立的資料
-  // res.location(`/users/${user.id}`)
   return res.status(201).json({
     status: 'success',
     data: null,

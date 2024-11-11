@@ -144,10 +144,10 @@ export default function ChartMonth() {
     )
     return { date, totalBatchSum, totalProtein }
   })
-
   const chartData = {
     labels: aggregatedData.map((item) => {
       const date = new Date(item.date)
+      // 顯示「月-日」格式作為標籤
       return `${String(date.getMonth() + 1).padStart(2, '0')}-${String(
         date.getDate()
       ).padStart(2, '0')}`
@@ -177,12 +177,17 @@ export default function ChartMonth() {
       tooltip: {
         callbacks: {
           label: (tooltipItem) => {
-            const date = tooltipItem.label
-            const dayData =
-              monthData.filter((item) => item.batch_date === date) || []
+            // 使用 tooltipItem.index 來找到對應的日期
+            const index = tooltipItem.dataIndex
+            const fullDate = aggregatedData[index]?.date || ''
+            const dayData = monthData.filter(
+              (item) => item.batch_date === fullDate
+            )
+
             if (!Array.isArray(dayData) || dayData.length === 0) {
               return '無資料'
             }
+
             const totalBatchSum = dayData.reduce(
               (sum, item) => sum + item.batch_sum,
               0
@@ -191,6 +196,7 @@ export default function ChartMonth() {
               (sum, item) => sum + (item.batch_p_sum || 0),
               0
             )
+
             return [
               `${dayData
                 .map((item) => `${item.batch_name}: ${item.batch_sum} kcal`)
@@ -230,7 +236,7 @@ export default function ChartMonth() {
             下一月
           </button>
         </div>
-        <div className='col-4'></div>
+        <div className="col-4"></div>
       </div>
 
       <Line data={chartData} options={chartOptions} />

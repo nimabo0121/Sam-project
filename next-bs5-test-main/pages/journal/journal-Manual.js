@@ -301,8 +301,10 @@ export default function JournalManual() {
       </table>
 
       <div className="mb-3 pt-1">
-        <textarea
+      <textarea
           className="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
           placeholder="備註"
           value={notes}
           onChange={handleNotesChange}
