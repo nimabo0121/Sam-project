@@ -98,7 +98,7 @@ export default function ChartYear() {
               上一年
             </button>
             <strong className="">
-              {startDate} - {endDate}
+              {startDate.slice(0, 7)} - {endDate.slice(0, 7)}
             </strong>
             <button
               className="btn btn-sm"
