@@ -3,136 +3,159 @@
     "name": "拔絲起司法式三明治",
     "imgSrc": "拔絲起司法式三明治.png",
     "price": "49元",
-    "calories": "305kcal"
+    "calories": "305kcal",
+    "protein": "10g"
   },
   {
     "name": "香炸鱈魚排堡",
     "imgSrc": "香炸鱈魚排堡.png",
     "price": "69元",
-    "calories": "340kcal"
+    "calories": "340kcal",
+    "protein": "15g"
   },
   {
     "name": "黃金蝦排堡",
     "imgSrc": "黃金蝦排堡.png",
     "price": "89元",
-    "calories": "427kcal"
+    "calories": "427kcal",
+    "protein": "16g"
   },
   {
     "name": "勁辣雞腿堡",
     "imgSrc": "勁辣雞腿堡.png",
     "price": "59元",
-    "calories": "450kcal"
+    "calories": "450kcal",
+    "protein": "20g"
   },
   {
     "name": "吉士豬肉堡加蛋",
     "imgSrc": "吉士豬肉堡加蛋.png",
     "price": "45元",
-    "calories": "261kcal"
+    "calories": "261kcal",
+    "protein": "12g"
   },
   {
     "name": "(熱壓土司)青醬雞絲",
     "imgSrc": "(熱壓土司)青醬雞絲.png",
-    "price": "70元"
+    "price": "70元",
+    "protein": "13g"
   },
   {
     "name": "(熱壓土司)丹麥紅豆麻糬",
     "imgSrc": "(熱壓土司)丹麥紅豆麻糬.png",
     "price": "60元",
-    "calories": "396kcal"
+    "calories": "396kcal",
+    "protein": "6g"
   },
   {
     "name": "(熱壓吐司)松露嫩蛋",
     "imgSrc": "(熱壓吐司)松露嫩蛋.png",
     "price": "60元",
-    "calories": "299kcal"
+    "calories": "299kcal",
+    "protein": "11g"
   },
   {
     "name": "(熱壓土司)丹麥鮪魚起司",
     "imgSrc": "(熱壓土司)丹麥鮪魚起司.png",
     "price": "60元",
-    "calories": "328kcal"
+    "calories": "328kcal",
+    "protein": "14g"
   },
   {
     "name": "(熱壓土司)厚起司蛋",
     "imgSrc": "(熱壓土司)厚起司蛋.png",
     "price": "65元",
-    "calories": "333kcal"
+    "calories": "333kcal",
+    "protein": "12g"
   },
   {
     "name": "(熱壓土司)醬燒炙烤牛",
     "imgSrc": "(熱壓土司)醬燒炙烤牛.png",
     "price": "70元",
-    "calories": "235kcal"
+    "calories": "235kcal",
+    "protein": "15g"
   },
   {
     "name": "(熱壓土司)紐奧良風味烤雞",
     "imgSrc": "(熱壓土司)紐奧良風味烤雞.png",
     "price": "65元",
-    "calories": "293kcal"
+    "calories": "293kcal",
+    "protein": "16g"
   },
   {
     "name": "(熱壓土司)里肌肉蛋",
     "imgSrc": "(熱壓土司)里肌肉蛋.png",
     "price": "65元",
-    "calories": "287kcal"
+    "calories": "287kcal",
+    "protein": "14g"
   },
   {
     "name": "芋泥肉鬆嫩蛋捲餅",
     "imgSrc": "芋泥肉鬆嫩蛋捲餅.png",
     "price": "69元",
-    "calories": "340kcal"
+    "calories": "340kcal",
+    "protein": "9g"
   },
   {
     "name": "芋香肉鬆三明治",
     "imgSrc": "芋香肉鬆三明治.png",
     "price": "49元",
-    "calories": "368kcal"
+    "calories": "368kcal",
+    "protein": "8g"
   },
   {
     "name": "藍莓乳酪三明治",
     "imgSrc": "藍莓乳酪三明治.png",
     "price": "29元",
-    "calories": "175kcal"
+    "calories": "175kcal",
+    "protein": "4g"
   },
   {
     "name": "日式雞蛋沙拉三明治",
     "imgSrc": "日式雞蛋沙拉三明治.png",
-    "price": "49元"
+    "price": "49元",
+    "protein": "10g"
   },
   {
     "name": "小龍蝦沙拉蛋三明治",
     "imgSrc": "小龍蝦沙拉蛋三明治.png",
     "price": "49元",
-    "calories": "252kcal"
+    "calories": "252kcal",
+    "protein": "11g"
   },
   {
     "name": "燻雞總匯鮮蔬三明治",
     "imgSrc": "燻雞總匯鮮蔬三明治.png",
     "price": "59元",
-    "calories": "292kcal"
+    "calories": "292kcal",
+    "protein": "13g"
   },
   {
     "name": "溏心蛋紐奧良風味烤雞三明治",
     "imgSrc": "溏心蛋紐奧良風味烤雞三明治.png",
     "price": "59元",
-    "calories": "235kcal"
+    "calories": "235kcal",
+    "protein": "15g"
   },
   {
     "name": "鮪魚洋芋溏心蛋三明治",
     "imgSrc": "鮪魚洋芋溏心蛋三明治.png",
     "price": "49元",
-    "calories": "281kcal"
+    "calories": "281kcal",
+    "protein": "12g"
   },
   {
     "name": "雙倍起司火腿蛋三明治",
     "imgSrc": "雙倍起司火腿蛋三明治.png",
     "price": "39元",
-    "calories": "266kcal"
+    "calories": "266kcal",
+    "protein": "11g"
   },
   {
     "name": "起司三重奏三明治",
     "imgSrc": "起司三重奏三明治.png",
     "price": "39元",
-    "calories": "283kcal"
+    "calories": "283kcal",
+    "protein": "9g"
   }
 ]

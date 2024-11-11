@@ -3,120 +3,140 @@
     "name": "壹番屋-炸雞排起司咖哩焗飯",
     "imgSrc": "壹番屋-炸雞排起司咖哩焗飯.png",
     "price": "99元",
-    "calories": "657kcal"
+    "calories": "657kcal",
+    "protein": "28g"
   },
   {
     "name": "星宇航空-雙醬雞排咖哩飯",
     "imgSrc": "星宇航空-雙醬雞排咖哩飯.png",
     "price": "99元",
-    "calories": "764kcal"
+    "calories": "764kcal",
+    "protein": "30g"
   },
   {
     "name": "香炸豬排歐姆蛋咖哩飯",
     "imgSrc": "香炸豬排歐姆蛋咖哩飯.png",
     "price": "99元",
-    "calories": "727kcal"
+    "calories": "727kcal",
+    "protein": "35g"
   },
   {
     "name": "歐姆蛋牛肉咖哩飯",
     "imgSrc": "歐姆蛋牛肉咖哩飯.png",
     "price": "99元",
-    "calories": "720kcal"
+    "calories": "720kcal",
+    "protein": "32g"
   },
   {
     "name": "歐姆蛋包飯",
     "imgSrc": "歐姆蛋包飯.png",
     "price": "89元",
-    "calories": "800kcal"
+    "calories": "800kcal",
+    "protein": "18g"
   },
   {
     "name": "咖哩雞排焗飯",
     "imgSrc": "咖哩雞排焗飯.png",
     "price": "99元",
-    "calories": "770kcal"
+    "calories": "770kcal",
+    "protein": "30g"
   },
   {
     "name": "木曜-黑胡椒鐵板豆腐餐盒",
     "imgSrc": "木曜-黑胡椒鐵板豆腐餐盒.png",
     "price": "99元",
-    "calories": "618kcal"
+    "calories": "618kcal",
+    "protein": "20g"
   },
   {
     "name": "增雞蛋白餐",
     "imgSrc": "增雞蛋白餐.png",
     "price": "99元",
-    "calories": "595kcal"
+    "calories": "595kcal",
+    "protein": "40g"
   },
   {
     "name": "菠菜起司烤雞紅藜糯麥飯",
     "imgSrc": "菠菜起司烤雞紅藜糯麥飯.png",
     "price": "99元",
-    "calories": "411kcal"
+    "calories": "411kcal",
+    "protein": "25g"
   },
   {
     "name": "21Plus香草烤雞腿時蔬餐",
     "imgSrc": "21Plus香草烤雞腿時蔬餐.png",
     "price": "89元",
-    "calories": "430kcal"
+    "calories": "430kcal",
+    "protein": "28g"
   },
   {
     "name": "香烤雞胸鮮蔬餐",
     "imgSrc": "香烤雞胸鮮蔬餐.png",
     "price": "89元",
-    "calories": "374kcal"
+    "calories": "374kcal",
+    "protein": "26g"
   },
   {
     "name": "牛角-炭烤牛燒肉便當",
     "imgSrc": "牛角-炭烤牛燒肉便當.png",
     "price": "99元",
-    "calories": "591kcal"
+    "calories": "591kcal",
+    "protein": "30g"
   },
   {
     "name": "牛角-炙燒雙拼便當",
     "imgSrc": "牛角-炙燒雙拼便當.png",
     "price": "99元",
-    "calories": "614kcal"
+    "calories": "614kcal",
+    "protein": "33g"
   },
   {
     "name": "黃金炸豬排玉子丼",
     "imgSrc": "黃金炸豬排玉子丼.png",
     "price": "99元",
-    "calories": "629kcal"
+    "calories": "629kcal",
+    "protein": "28g"
   },
   {
     "name": "一鍋燒-滑蛋嫩雞親子丼",
     "imgSrc": "一鍋燒-滑蛋嫩雞親子丼.png",
     "price": "89元",
-    "calories": "535kcal"
+    "calories": "535kcal",
+    "protein": "22g"
   },
   {
     "name": "日式佛蒙特咖哩雞肉飯",
     "imgSrc": "日式佛蒙特咖哩雞肉飯.png",
     "price": "89元",
-    "calories": "795kcal"
+    "calories": "795kcal",
+    "protein": "27g"
   },
   {
     "name": "日式辛香豬肉咖哩飯",
     "imgSrc": "日式辛香豬肉咖哩飯.png",
     "price": "89元",
-    "calories": "737kcal"
+    "calories": "737kcal",
+    "protein": "25g"
   },
   {
     "name": "泰式椰汁綠咖哩雞肉飯(辣)",
     "imgSrc": "泰式椰汁綠咖哩雞肉飯(辣).png",
     "price": "89元",
-    "calories": "664kcal"
+    "calories": "664kcal",
+    "protein": "28g"
   },
   {
     "name": "真飽牛丼",
     "imgSrc": "真飽牛丼.png",
     "price": "85元",
-    "calories": "753kcal"
+    "calories": "753kcal",
+    "protein": "34g"
   },
   {
     "name": "爪哇咖哩飯",
     "imgSrc": "爪哇咖哩飯.png",
     "price": "70元",
-    "calories": "775kcal"
+    "calories": "775kcal",
+    "protein": "18g"
   }
 ]

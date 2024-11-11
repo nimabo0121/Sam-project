@@ -12,7 +12,6 @@ import {
   Legend,
 } from 'chart.js'
 
-// 註冊 chart.js 插件
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -24,29 +23,28 @@ ChartJS.register(
 )
 
 export default function ChartWeek() {
-  const [weekData, setWeekData] = useState([]) // 初始化為空陣列
+  const [weekData, setWeekData] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-  const [totalCalories, setTotalCalories] = useState(0) // 用來儲存總熱量
+  const [totalCalories, setTotalCalories] = useState(0)
+  const [totalProtein, setTotalProtein] = useState(0)
 
-  // 取得當前日期
   const currentDate = new Date()
   const currentDay = currentDate.getDate()
   const currentMonth = currentDate.getMonth()
   const currentYear = currentDate.getFullYear()
 
-  // 計算當前日期屬於哪一周的周日與周一
   const getWeekDateRange = () => {
-    const dayOfWeek = currentDate.getDay() // 0 是週日, 1 是週一, ..., 6 是週六
-    const diffToSunday = dayOfWeek === 0 ? 0 : 7 - dayOfWeek // 計算週日的差值
+    const dayOfWeek = currentDate.getDay()
+    const diffToSunday = dayOfWeek === 0 ? 0 : 7 - dayOfWeek
 
     const endDate = new Date(
       currentYear,
       currentMonth,
       currentDay + diffToSunday
-    ) // 周日
-    const startDate = new Date(endDate) // 初始化開始日期為周日
-    startDate.setDate(endDate.getDate() - 6) // 設定為周一
+    )
+    const startDate = new Date(endDate)
+    startDate.setDate(endDate.getDate() - 6)
 
     return {
       startDate: `${startDate.getFullYear()}-${String(
@@ -60,31 +58,53 @@ export default function ChartWeek() {
 
   const { startDate, endDate } = getWeekDateRange()
 
+  // 生成一周完整的日期列表
+  const generateWeekDates = (start, end) => {
+    const dates = []
+    const current = new Date(start)
+    while (current <= new Date(end)) {
+      dates.push(
+        `${current.getFullYear()}-${String(current.getMonth() + 1).padStart(
+          2,
+          '0'
+        )}-${String(current.getDate()).padStart(2, '0')}`
+      )
+      current.setDate(current.getDate() + 1)
+    }
+    return dates
+  }
+
   useEffect(() => {
-    // 發送請求獲取一周的資料
     axios
       .get('http://localhost:3005/api/healthy/records', {
         params: {
           period: 'week',
           startDate,
           endDate,
-          t: new Date().getTime(), // 添加時間戳
+          t: new Date().getTime(),
         },
-        withCredentials: true, // 確保攜帶 cookie
+        withCredentials: true,
         headers: {
           'Content-Type': 'application/json',
         },
       })
       .then((response) => {
-        const data = response.data.data || [] // 設置為陣列，即使回應中沒有資料
+        const data = response.data.data || []
         setWeekData(data)
 
-        // 計算總熱量
-        const total = data.reduce((sum, item) => sum + item.batch_sum, 0)
-        setTotalCalories(total)
+        const totalCalories = data.reduce(
+          (sum, item) => sum + item.batch_sum,
+          0
+        )
+        const totalProtein = data.reduce(
+          (sum, item) => sum + (item.batch_p_sum || 0),
+          0
+        )
+
+        setTotalCalories(totalCalories)
+        setTotalProtein(totalProtein)
 
         setLoading(false)
-        console.log(response.data)
       })
       .catch((error) => {
         setError(error.message)
@@ -92,76 +112,71 @@ export default function ChartWeek() {
       })
   }, [startDate, endDate])
 
-  // 如果正在加載，顯示 loading
-  if (loading) {
-    return <div>Loading...</div>
-  }
-
-  // 如果有錯誤，顯示錯誤訊息
-  if (error) {
-    return <div>Error: {error}</div>
-  }
-
-  // 如果沒有數據，顯示提示
-  if (!Array.isArray(weekData) || weekData.length === 0) {
+  if (loading) return <div>Loading...</div>
+  if (error) return <div>Error: {error}</div>
+  if (!Array.isArray(weekData) || weekData.length === 0)
     return <div>本周無數據</div>
-  }
+  console.log(weekData)
+  // 補全缺失的日期資料
+  const weekDates = generateWeekDates(startDate, endDate)
+  const aggregatedData = weekDates.map((date) => {
+    const dayData = weekData.filter((item) => item.batch_date === date)
+    const totalBatchSum = dayData.reduce((sum, item) => sum + item.batch_sum, 0)
+    const totalProtein = dayData.reduce(
+      (sum, item) => sum + (item.batch_p_sum || 0),
+      0
+    )
+    return { date, totalBatchSum, totalProtein }
+  })
 
-  // 合併相同 batch_date 的資料並加總 batch_sum，保留 batch_name
-  const aggregatedData = weekData.reduce((acc, item) => {
-    const date = item.batch_date
-    if (acc[date]) {
-      acc[date].push({
-        batch_name: item.batch_name, // 保存每個 batch_name
-        batch_sum: item.batch_sum, // 保存每個對應的 batch_sum
-      })
-    } else {
-      acc[date] = [
-        {
-          batch_name: item.batch_name, // 初始化 batch_name
-          batch_sum: item.batch_sum, // 初始化 batch_sum
-        },
-      ]
-    }
-    return acc
-  }, {})
-
-  // 將資料轉換為圖表需要的格式
   const chartData = {
-    labels: Object.keys(aggregatedData), // 以 batch_date 作為 x 軸標籤
+    labels: aggregatedData.map((item) => item.date),
     datasets: [
       {
-        label: '每日熱量 (kcal)', // 熱量數據標籤
-        data: Object.values(aggregatedData).map((itemArray) =>
-          itemArray.reduce((sum, item) => sum + item.batch_sum, 0)
-        ), // 使用加總後的 batch_sum 作為數據
+        label: '每日熱量 (kcal)',
+        data: aggregatedData.map((item) => item.totalBatchSum),
         fill: false,
         borderColor: 'rgb(75, 192, 192)',
+        tension: 0.1,
+      },
+      {
+        label: '每日蛋白質 (g)',
+        data: aggregatedData.map((item) => item.totalProtein),
+        fill: false,
+        borderColor: 'red',
         tension: 0.1,
       },
     ],
   }
 
-  // 配置 Tooltips 來顯示每個資料點的備註和 batch_sum
   const chartOptions = {
-    responsive: true, // 使圖表自適應容器大小
-    maintainAspectRatio: false, // 禁用保持比例，以適應容器
+    responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       tooltip: {
         callbacks: {
           label: (tooltipItem) => {
-            const date = tooltipItem.label // 當前 x 軸的日期
-            const batchData = aggregatedData[date] // 獲取對應日期的資料
-            const totalBatchSum = batchData.reduce(
+            const date = tooltipItem.label
+            const dayData =
+              weekData.filter((item) => item.batch_date === date) || []
+            if (!Array.isArray(dayData) || dayData.length === 0) {
+              return '無資料'
+            }
+            const totalBatchSum = dayData.reduce(
               (sum, item) => sum + item.batch_sum,
               0
             )
-            // 顯示每個 batch_name 和對應的 batch_sum
-            return (
-              batchData
-                .map((item) => `${item.batch_name}: ${item.batch_sum} kcal`) // 顯示每個 batch_name 及其對應的 batch_sum
-                .join(', ') + ` Total: ${totalBatchSum} kcal`
-            ) // 換行每個備註
+            const totalProtein = dayData.reduce(
+              (sum, item) => sum + (item.batch_p_sum || 0),
+              0
+            )
+            return [
+              `${dayData
+                .map((item) => `${item.batch_name}: ${item.batch_sum} kcal`)
+                .join(', ')}`,
+              `總熱量: ${totalBatchSum} kcal`,
+              `總蛋白質: ${totalProtein} g`,
+            ]
           },
         },
       },
@@ -169,15 +184,13 @@ export default function ChartWeek() {
   }
 
   return (
-    <div style={{ height: '350PX', width: '100%' }}>
+    <div style={{ height: '350px', width: '100%' }}>
       <div>
-        <strong>本周總熱量：{totalCalories} kcal</strong>
+        <strong>
+          本周總熱量：{totalCalories} kcal / 蛋白質：{totalProtein} g
+        </strong>
       </div>
-      <Line
-        data={chartData}
-       
-        options={chartOptions} // 傳入設置好的 options
-      />
+      <Line data={chartData} options={chartOptions} />
     </div>
   )
 }

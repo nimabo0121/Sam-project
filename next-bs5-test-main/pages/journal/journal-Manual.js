@@ -1,12 +1,16 @@
 import React, { useMemo, useState } from 'react'
 import axios from 'axios'
 
-export default function JournalCalculation({
-  selectedItems,
-  setSelectedItems,
-}) {
+export default function JournalManual() {
+  const [selectedItems, setSelectedItems] = useState([])
   const [notes, setNotes] = useState('')
   const [successMessage, setSuccessMessage] = useState('')
+  const [itemName, setItemName] = useState('')
+  const [itemCalories, setItemCalories] = useState('')
+  const [itemProtein, setItemProtein] = useState('')
+  const [itemNameError, setItemNameError] = useState('')
+  const [itemCaloriesError, setItemCaloriesError] = useState('')
+  const [itemProteinError, setItemProteinError] = useState('')
 
   const getLocalDate = () => {
     const localDate = new Date()
@@ -24,6 +28,7 @@ export default function JournalCalculation({
       return total + (isNaN(calories) ? 0 : calories)
     }, 0)
   }, [selectedItems])
+
   const totalProtein = useMemo(() => {
     return selectedItems.reduce((total, item) => {
       const protein = parseInt(item.protein.replace('g', '').trim(), 10)
@@ -39,6 +44,68 @@ export default function JournalCalculation({
     setRecordDate(e.target.value)
   }
 
+  const handleAddItem = () => {
+    let hasError = false
+
+    if (!itemName) {
+      setItemNameError('請輸入食品名稱')
+      hasError = true
+    }
+
+    if (!itemCalories) {
+      setItemCaloriesError('請輸入熱量')
+      hasError = true
+    } else if (isNaN(itemCalories) || itemCalories <= 0) {
+      setItemCaloriesError('熱量必須為正數')
+      hasError = true
+    }
+
+    if (!itemProtein) {
+      setItemProteinError('請輸入蛋白質')
+      hasError = true
+    } else if (isNaN(itemProtein) || itemProtein <= 0) {
+      setItemProteinError('蛋白質必須為正數')
+      hasError = true
+    }
+
+    if (hasError) return
+
+    const newItem = {
+      name: itemName,
+      calories: `${itemCalories} kcal`,
+      protein: `${itemProtein} g`,
+    }
+
+    setSelectedItems((prevItems) => [...prevItems, newItem])
+    setItemName('')
+    setItemCalories('')
+    setItemProtein('')
+  }
+
+  const handleDeleteItem = (index) => {
+    const newSelectedItems = selectedItems.filter((_, i) => i !== index)
+    setSelectedItems(newSelectedItems)
+  }
+
+  const handleItemNameChange = (e) => {
+    setItemName(e.target.value)
+    if (e.target.value) {
+      setItemNameError('')
+    }
+  }
+
+  const handleItemCaloriesChange = (e) => {
+    setItemCalories(e.target.value)
+    if (e.target.value && !isNaN(e.target.value) && e.target.value > 0) {
+      setItemCaloriesError('')
+    }
+  }
+  const handleItemProteinChange = (e) => {
+    setItemProtein(e.target.value)
+    if (e.target.value && !isNaN(e.target.value) && e.target.value > 0) {
+      setItemProteinError('')
+    }
+  }
   const handleSave = async () => {
     try {
       const response = await axios.post(
@@ -84,11 +151,6 @@ export default function JournalCalculation({
     setNotes('')
   }
 
-  const handleDeleteItem = (index) => {
-    const newSelectedItems = selectedItems.filter((_, i) => i !== index)
-    setSelectedItems(newSelectedItems)
-  }
-
   return (
     <form>
       <div className="mb-3">
@@ -100,13 +162,52 @@ export default function JournalCalculation({
           onChange={handleDateChange}
         />
       </div>
-      <table
-        style={{
-          width: '100%',
-          borderCollapse: 'collapse',
-          fontFamily: 'Arial, sans-serif', // 統一字體
-        }}
-      >
+
+      {/* 手動輸入食品名稱和熱量 */}
+      <div className="mb-2">
+        <input
+          type="text"
+          className={`form-control ${itemNameError ? 'is-invalid' : ''}`}
+          placeholder="食品名稱"
+          value={itemName}
+          onChange={handleItemNameChange}
+        />
+        {itemNameError && <div className="text-danger">{itemNameError}</div>}
+
+        <input
+          type="number"
+          className={`form-control mt-2 ${
+            itemCaloriesError ? 'is-invalid' : ''
+          }`}
+          placeholder="熱量 (kcal)"
+          value={itemCalories}
+          onChange={handleItemCaloriesChange}
+        />
+        {itemCaloriesError && (
+          <div className="text-danger">{itemCaloriesError}</div>
+        )}
+        <input
+          type="number"
+          className={`form-control mt-2 ${
+            itemProteinError ? 'is-invalid' : ''
+          }`}
+          placeholder="蛋白質 (g)"
+          value={itemProtein}
+          onChange={handleItemProteinChange}
+        />
+        {itemProteinError && (
+          <div className="text-danger">{itemProteinError}</div>
+        )}
+        <button
+          type="button"
+          className="btn btn-outline-secondary ml-2 mt-1"
+          onClick={handleAddItem}
+        >
+          新增食品
+        </button>
+      </div>
+
+      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr>
             <th>食品名稱</th>
@@ -200,29 +301,17 @@ export default function JournalCalculation({
       </table>
 
       <div className="mb-3 pt-1">
-        {/* <label htmlFor="exampleFormControlTextarea1" className="form-label">
-          備註
-        </label> */}
         <textarea
           className="form-control"
-          id="exampleFormControlTextarea1"
-          rows="3"
           placeholder="備註"
           value={notes}
           onChange={handleNotesChange}
         ></textarea>
       </div>
 
-      {/* 用 div 包裝總熱量 */}
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          marginTop: '10px',
-        }}
-      >
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <strong>總熱量:</strong>
-        <span>{totalCalories} (kcal)</span>
+        <span>{totalCalories} kcal</span>
       </div>
       {/* 總蛋白質 */}
       <div
@@ -235,7 +324,6 @@ export default function JournalCalculation({
         <strong>總蛋白質:</strong>
         <span>{totalProtein} (g)</span>
       </div>
-
       <button
         type="button"
         className="btn btn-outline-secondary"
@@ -251,12 +339,10 @@ export default function JournalCalculation({
       >
         清除
       </button>
+
       {successMessage && (
         <span
-          style={{
-            marginTop: '15px',
-            color: successMessage.includes('錯誤') ? 'red' : 'green',
-          }}
+          style={{ color: successMessage.includes('錯誤') ? 'red' : 'green' }}
         >
           {successMessage}
         </span>

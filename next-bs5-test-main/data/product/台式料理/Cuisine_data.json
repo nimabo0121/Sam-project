@@ -3,95 +3,111 @@
     "name": "極饗-海鮮中華丼",
     "imgSrc": "極饗-海鮮中華丼.png",
     "price": "99元",
-    "calories": "483kcal"
+    "calories": "483kcal",
+    "protein": "22g"
   },
   {
     "name": "極饗-林聰明-香辣豬肉燴飯",
     "imgSrc": "極饗-林聰明-香辣豬肉燴飯.png",
     "price": "85元",
-    "calories": "628kcal"
+    "calories": "628kcal",
+    "protein": "28g"
   },
   {
     "name": "Homeal x鄧師傅-客家小炒",
     "imgSrc": "Homeal x鄧師傅-客家小炒.png",
     "price": "69元",
-    "calories": "310kcal"
+    "calories": "310kcal",
+    "protein": "16g"
   },
   {
     "name": "Homeal x鄧師傅-塔香風味炒花蛤",
     "imgSrc": "Homeal x鄧師傅-塔香風味炒花蛤.png",
     "price": "69元",
-    "calories": "295.5kcal"
+    "calories": "295.5kcal",
+    "protein": "18g"
   },
   {
     "name": "Homeal x鄧師傅-鳳梨糖醋肉",
     "imgSrc": "Homeal x鄧師傅-鳳梨糖醋肉.png",
     "price": "69元",
-    "calories": "408.5kcal"
+    "calories": "408.5kcal",
+    "protein": "20g"
   },
   {
     "name": "極饗-蒜香白玉燒肉便當",
     "imgSrc": "極饗-蒜香白玉燒肉便當.png",
-    "price": "69元"
+    "price": "69元",
+    "protein": "25g"
   },
   {
     "name": "極饗-香腸雙拼便當",
     "imgSrc": "極饗-香腸雙拼便當.png",
     "price": "89元",
-    "calories": "701kcal"
+    "calories": "701kcal",
+    "protein": "30g"
   },
   {
     "name": "極饗-嘉義風味雞肉飯",
     "imgSrc": "極饗-嘉義風味雞肉飯.png",
     "price": "79元",
-    "calories": "542kcal"
+    "calories": "542kcal",
+    "protein": "27g"
   },
   {
     "name": "極饗-四川風味麻辣豆腐飯",
     "imgSrc": "極饗-四川風味麻辣豆腐飯.png",
     "price": "79元",
-    "calories": "655kcal"
+    "calories": "655kcal",
+    "protein": "18g"
   },
   {
     "name": "極饗-滑蛋牛肉燴飯",
     "imgSrc": "極饗-滑蛋牛肉燴飯.png",
     "price": "89元",
-    "calories": "551kcal"
+    "calories": "551kcal",
+    "protein": "26g"
   },
   {
     "name": "極饗-奮起湖軟燒肉便當",
     "imgSrc": "極饗-奮起湖軟燒肉便當.png",
     "price": "89元",
-    "calories": "783kcal"
+    "calories": "783kcal",
+    "protein": "35g"
   },
   {
     "name": "極饗-豪華奮起湖特製便當",
     "imgSrc": "極饗-豪華奮起湖特製便當.png",
     "price": "129元",
-    "calories": "747kcal"
+    "calories": "747kcal",
+    "protein": "38g"
   },
   {
     "name": "極饗-豪華秘製雙拼餐盒",
     "imgSrc": "極饗-豪華秘製雙拼餐盒.png",
     "price": "99元",
-    "calories": "715kcal"
+    "calories": "715kcal",
+    "protein": "32g"
   },
   {
     "name": "肉絲黃金蛋炒飯",
     "imgSrc": "肉絲黃金蛋炒飯.png",
     "price": "79元",
-    "calories": "616kcal"
+    "calories": "616kcal",
+    "protein": "21g"
   },
   {
     "name": "真飽-黑胡椒鐵板豬肉飯",
     "imgSrc": "真飽-黑胡椒鐵板豬肉飯.png",
     "price": "89元",
-    "calories": "730kcal"
+    "calories": "730kcal",
+    "protein": "30g"
   },
   {
     "name": "(區)紅燒牛肉燴飯",
     "imgSrc": "(區)紅燒牛肉燴飯.png",
     "price": "70元",
-    "calories": "636kcal"
+    "calories": "636kcal",
+    "protein": "28g"
   }
 ]

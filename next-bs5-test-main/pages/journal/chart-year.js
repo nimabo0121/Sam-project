@@ -24,49 +24,52 @@ ChartJS.register(
 )
 
 export default function ChartYear() {
-  const [monthData, setMonthData] = useState([]) // 初始化為空陣列
+  const [monthData, setMonthData] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-  const [totalCalories, setTotalCalories] = useState(0) // 用來儲存總熱量
+  const [totalCalories, setTotalCalories] = useState(0)
 
-  // 取得當前日期
-  const currentDate = new Date()
-  const currentYear = currentDate.getFullYear()
+  // 取得當前年份
+  const currentYear = new Date().getFullYear()
 
-  // 計算當年的第一天和最後一天
-  const getYearDateRange = () => {
-    const startDate = new Date(currentYear, 0, 1) // 當年第一天
-    const endDate = new Date(currentYear, 11, 31) // 當年最後一天
-
-    return {
-      startDate: `${startDate.getFullYear()}-${String(
-        startDate.getMonth() + 1
-      ).padStart(2, '0')}-${String(startDate.getDate()).padStart(2, '0')}`,
-      endDate: `${endDate.getFullYear()}-${String(
-        endDate.getMonth() + 1
-      ).padStart(2, '0')}-${String(endDate.getDate()).padStart(2, '0')}`,
+  // 建立全年月份清單 (YYYY-MM)
+  const getFullMonthList = () => {
+    const months = []
+    for (let i = 0; i < 12; i++) {
+      const month = `${currentYear}-${String(i + 1).padStart(2, '0')}`
+      months.push(month)
     }
+    return months
+  }
+
+  const fullMonthList = getFullMonthList()
+
+  // 計算當年範圍
+  const getYearDateRange = () => {
+    const startDate = `${currentYear}-01-01`
+    const endDate = `${currentYear}-12-31`
+    return { startDate, endDate }
   }
 
   const { startDate, endDate } = getYearDateRange()
 
   useEffect(() => {
-    // 發送請求獲取當年的資料
+    // 獲取當年資料
     axios
       .get('http://localhost:3005/api/healthy/records', {
         params: {
-          period: 'year', // 查詢全年的資料
+          period: 'year',
           startDate,
           endDate,
-          t: new Date().getTime(), // 添加時間戳
+          t: new Date().getTime(),
         },
-        withCredentials: true, // 確保攜帶 cookie
+        withCredentials: true,
         headers: {
           'Content-Type': 'application/json',
         },
       })
       .then((response) => {
-        const data = response.data.data || [] // 設置為陣列，即使回應中沒有資料
+        const data = response.data.data || []
         setMonthData(data)
 
         // 計算總熱量
@@ -74,83 +77,58 @@ export default function ChartYear() {
         setTotalCalories(total)
 
         setLoading(false)
-        console.log(response.data)
       })
       .catch((error) => {
         setError(error.message)
         setLoading(false)
       })
-  }, [startDate, endDate])
+  }, [currentYear, startDate, endDate])
 
-  // 如果正在加載，顯示 loading
-  if (loading) {
-    return <div>Loading...</div>
-  }
-
-  // 如果有錯誤，顯示錯誤訊息
-  if (error) {
-    return <div>Error: {error}</div>
-  }
-
-  // 如果沒有數據，顯示提示
-  if (!Array.isArray(monthData) || monthData.length === 0) {
+  if (loading) return <div>Loading...</div>
+  if (error) return <div>Error: {error}</div>
+  if (!Array.isArray(monthData) || monthData.length === 0)
     return <div>今年無數據</div>
-  }
 
-  // 合併相同 batch_date 的資料並加總 batch_sum，保留 batch_name
+  // 整理資料，按月加總
   const aggregatedData = monthData.reduce((acc, item) => {
-    const month = item.batch_date.slice(0, 7) // 提取年-月（例如：2024-01）
-    if (acc[month]) {
-      acc[month].push({
-        batch_name: item.batch_name, // 保存每個 batch_name
-        batch_sum: item.batch_sum, // 保存每個對應的 batch_sum
-      })
-    } else {
-      acc[month] = [
-        {
-          batch_name: item.batch_name, // 初始化 batch_name
-          batch_sum: item.batch_sum, // 初始化 batch_sum
-        },
-      ]
-    }
+    const month = item.batch_date?.slice(0, 7) // 使用 Optional Chaining
+    if (!month) return acc // 若 `month` 為 falsy 值，跳過處理
+    acc[month] = (acc[month] || 0) + item.batch_sum
     return acc
   }, {})
 
-  // 將資料轉換為圖表需要的格式
+  // 補充缺少月份的數據為 0
+  const completeData = fullMonthList.map((month) => ({
+    month,
+    batch_sum:
+      typeof aggregatedData[month] === 'number' ? aggregatedData[month] : 0,
+  }))
+
+  // 準備圖表資料
   const chartData = {
-    labels: Object.keys(aggregatedData), // 以 batch_date 作為 x 軸標籤（年-月）
+    labels: completeData.map((item) => item.month), // 年-月作為 x 軸標籤
     datasets: [
       {
-        label: '每月熱量 (kcal)', // 熱量數據標籤
-        data: Object.values(aggregatedData).map((itemArray) =>
-          itemArray.reduce((sum, item) => sum + item.batch_sum, 0)
-        ), // 使用加總後的 batch_sum 作為數據
-        fill: false,
+        label: '每月熱量 (kcal)',
+        data: completeData.map((item) => item.batch_sum),
         borderColor: 'rgb(75, 192, 192)',
         tension: 0.1,
+        fill: false,
       },
     ],
   }
-  // 配置 Tooltips 來顯示每個資料點的備註和 batch_sum
+
+  // 配置 Tooltips 顯示每個 batch 的資訊
   const chartOptions = {
-    responsive: true, // 使圖表自適應容器大小
-    maintainAspectRatio: false, // 禁用保持比例，以適應容器
+    responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       tooltip: {
         callbacks: {
           label: (tooltipItem) => {
-            const date = tooltipItem.label // 當前 x 軸的日期
-            const batchData = aggregatedData[date] // 獲取對應日期的資料
-            const totalBatchSum = batchData.reduce(
-              (sum, item) => sum + item.batch_sum,
-              0
-            )
-            // 顯示每個 batch_name 和對應的 batch_sum
-            return (
-              batchData
-                .map((item) => `${item.batch_name}: ${item.batch_sum} kcal`) // 顯示每個 batch_name 及其對應的 batch_sum
-                .join(', ') + ` Total: ${totalBatchSum} kcal`
-            ) // 換行每個備註
+            const month = tooltipItem.label
+            const sum = aggregatedData[month] ?? 0 // 使用 Nullish Coalescing 運算子
+            return `總熱量: ${sum} kcal`
           },
         },
       },
@@ -160,12 +138,11 @@ export default function ChartYear() {
   return (
     <div style={{ height: '350px', width: '100%' }}>
       <div>
-        <strong>今年總熱量：{totalCalories} kcal</strong>
+        <strong>
+          {currentYear} 總熱量：{totalCalories} kcal
+        </strong>
       </div>
-      <Line
-        data={chartData}
-        options={chartOptions} // 傳入設置好的 options
-      />
+      <Line data={chartData} options={chartOptions} />
     </div>
   )
 }

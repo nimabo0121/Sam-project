@@ -3,48 +3,56 @@
     "name": "星宇航空-美式爆汁熱狗堡",
     "imgSrc": "星宇航空-美式爆汁熱狗堡.png",
     "price": "69元",
-    "calories": "390kcal"
+    "calories": "390kcal",
+    "protein": "15g"
   },
   {
     "name": "起司四重奏熱狗堡",
     "imgSrc": "起司四重奏熱狗堡.png",
     "price": "55元",
-    "calories": "453kcal"
+    "calories": "453kcal",
+    "protein": "20g"
   },
   {
     "name": "橋村辣醬熱狗",
     "imgSrc": "橋村辣醬熱狗.png",
     "price": "38元",
-    "calories": "206kcal"
+    "calories": "206kcal",
+    "protein": "10g"
   },
   {
     "name": "椒麻香辣熱狗",
     "imgSrc": "椒麻香辣熱狗.png",
     "price": "35元",
-    "calories": "190kcal"
+    "calories": "190kcal",
+    "protein": "9g"
   },
   {
     "name": "美式原味熱狗",
     "imgSrc": "美式原味熱狗.png",
     "price": "33元",
-    "calories": "204kcal"
+    "calories": "204kcal",
+    "protein": "11g"
   },
   {
     "name": "紐約客辣味熱狗",
     "imgSrc": "紐約客辣味熱狗.png",
     "price": "35元",
-    "calories": "233kcal"
+    "calories": "233kcal",
+    "protein": "12g"
   },
   {
     "name": "三起司熱狗",
     "imgSrc": "三起司熱狗.png",
     "price": "33元",
-    "calories": "212kcal"
+    "calories": "212kcal",
+    "protein": "13g"
   },
   {
     "name": "大亨堡麵包",
     "imgSrc": "大亨堡麵包.png",
     "price": "12元",
-    "calories": "177kcal"
+    "calories": "177kcal",
+    "protein": "5g"
   }
 ]

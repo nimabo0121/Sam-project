@@ -17,15 +17,20 @@ router.post('/', authenticate, async (req, res) => {
       const calories = parseInt(item.calories.replace('kcal', '').trim(), 10)
       return total + (isNaN(calories) ? 0 : calories)
     }, 0)
-
+    // 計算食物蛋白質總和
+    const totalProtein = items.reduce((total, item) => {
+      const protein = parseInt(item.protein.replace('g', '').trim(), 10)
+      return total + (isNaN(protein) ? 0 : protein)
+    }, 0)
     // 開始插入資料前，先儲存一個健康記錄的批次
     const batchResult = await sequelize.query(
-      `INSERT INTO healthy_batch (healthy_id, batch_sum, batch_name, batch_date, created_at) 
-       VALUES (?, ?, ?, ?, ?)`,
+      `INSERT INTO healthy_batch (healthy_id, batch_sum, batch_p_sum, batch_name, batch_date, created_at) 
+       VALUES (?, ?, ?, ?, ?, ?)`,
       {
         replacements: [
           currentUserId,
           totalCalories,
+          totalProtein,
           notes,
           recordDate,
           recordDate,
@@ -40,14 +45,16 @@ router.post('/', authenticate, async (req, res) => {
     // 插入食物記錄
     const insertPromises = items.map((item) =>
       sequelize.query(
-        `INSERT INTO healthy (healthy_id, batch_id, healthy_name, healthy_calories, healthy_sum, notes, record_date, created_at) 
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+        `INSERT INTO healthy (healthy_id, batch_id, healthy_name, healthy_calories, healthy_protein, protein_sum, healthy_sum, notes, record_date, created_at) 
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
         {
           replacements: [
             currentUserId,
             batchId, // 關聯到剛插入的批次
             item.name,
             parseInt(item.calories.replace('kcal', '').trim(), 10),
+            parseInt(item.protein.replace('g', '').trim(), 10),
+            totalProtein,
             totalCalories,
             notes,
             recordDate,

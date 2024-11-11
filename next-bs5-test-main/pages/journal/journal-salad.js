@@ -63,7 +63,7 @@ export default function JournalSalad({ onSelectItem }) {
             </div>
             <div className="card-body">
               <h5 className="card-title">{v.name}</h5>
-              <span>{v.calories}</span>
+              <span>{v.calories}, 蛋白質:{v.protein}</span>
             </div>
           </div>
         )

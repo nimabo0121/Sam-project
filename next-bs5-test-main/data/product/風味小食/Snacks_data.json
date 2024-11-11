@@ -3,256 +3,140 @@
     "name": "元進莊煙燻鴨賞",
     "imgSrc": "元進莊煙燻鴨賞.png",
     "price": "59元",
-    "calories": "168kcal"
+    "calories": "168kcal",
+    "protein": "12g"
   },
   {
     "name": "粥天子-廣式皮蛋瘦肉煲粥",
     "imgSrc": "粥天子-廣式皮蛋瘦肉煲粥.png",
     "price": "69元",
-    "calories": "369kcal"
+    "calories": "369kcal",
+    "protein": "15g"
   },
   {
     "name": "馨苑薑絲鱸魚湯",
     "imgSrc": "馨苑薑絲鱸魚湯.png",
     "price": "69元",
-    "calories": "84kcal"
+    "calories": "84kcal",
+    "protein": "10g"
   },
   {
     "name": "聖德科斯蕃茄蔬菜魚湯",
     "imgSrc": "聖德科斯蕃茄蔬菜魚湯.png",
     "price": "69元",
-    "calories": "124kcal"
+    "calories": "124kcal",
+    "protein": "8g"
   },
   {
     "name": "膳馨原盅厚菇燉雞湯",
     "imgSrc": "膳馨原盅厚菇燉雞湯.png",
     "price": "65元",
-    "calories": "138kcal"
+    "calories": "138kcal",
+    "protein": "13g"
   },
   {
     "name": "信州風味味噌煮",
     "imgSrc": "信州風味味噌煮.png",
     "price": "59元",
-    "calories": "120kcal"
+    "calories": "120kcal",
+    "protein": "7g"
   },
   {
     "name": "芋頭排骨酥湯",
     "imgSrc": "芋頭排骨酥湯.png",
     "price": "49元",
-    "calories": "207kcal"
+    "calories": "207kcal",
+    "protein": "11g"
   },
   {
     "name": "麻油米血",
     "imgSrc": "麻油米血.png",
     "price": "49元",
-    "calories": "145kcal"
+    "calories": "145kcal",
+    "protein": "5g"
   },
   {
     "name": "筒仔米糕",
     "imgSrc": "筒仔米糕.png",
     "price": "49元",
-    "calories": "207kcal"
+    "calories": "207kcal",
+    "protein": "6g"
   },
   {
     "name": "膳馨綠竹筍排骨湯",
     "imgSrc": "膳馨綠竹筍排骨湯.png",
     "price": "69元",
-    "calories": "75kcal"
+    "calories": "75kcal",
+    "protein": "9g"
   },
   {
     "name": "永心鳳茶剝皮辣椒燉雞盅",
     "imgSrc": "永心鳳茶剝皮辣椒燉雞盅.png",
     "price": "65元",
-    "calories": "130kcal"
+    "calories": "130kcal",
+    "protein": "14g"
   },
   {
     "name": "呷七碗酸菜碗粿",
     "imgSrc": "呷七碗酸菜碗粿.png",
     "price": "59元",
-    "calories": "267.1kcal"
+    "calories": "267.1kcal",
+    "protein": "4g"
   },
   {
     "name": "呷七碗麻油雞湯",
     "imgSrc": "呷七碗麻油雞湯.png",
     "price": "69元",
-    "calories": "194.2kcal"
+    "calories": "194.2kcal",
+    "protein": "16g"
   },
   {
     "name": "呷七碗藥燉排骨湯",
     "imgSrc": "呷七碗藥燉排骨湯.png",
     "price": "69元",
-    "calories": "478.8kcal"
+    "calories": "478.8kcal",
+    "protein": "20g"
   },
   {
     "name": "呷七碗豬肉筍粥",
     "imgSrc": "呷七碗豬肉筍粥.png",
     "price": "69元",
-    "calories": "380kcal"
+    "calories": "380kcal",
+    "protein": "12g"
   },
   {
     "name": "呷七碗虱目魚粥",
     "imgSrc": "呷七碗虱目魚粥.png",
     "price": "99元",
-    "calories": "183.9kcal"
+    "calories": "183.9kcal",
+    "protein": "17g"
   },
   {
     "name": "阿桐阿寶四神湯",
     "imgSrc": "阿桐阿寶四神湯.png",
     "price": "59元",
-    "calories": "144kcal"
-  },
-  {
-    "name": "粥天子-阿發師香芋瘦肉煲粥",
-    "imgSrc": "粥天子-阿發師香芋瘦肉煲粥.png",
-    "price": "65元",
-    "calories": "255kcal"
-  },
-  {
-    "name": "阿發師香菇雞肉粥",
-    "imgSrc": "阿發師香菇雞肉粥.png",
-    "price": "59元",
-    "calories": "250kcal"
-  },
-  {
-    "name": "皮蛋瘦肉粥",
-    "imgSrc": "皮蛋瘦肉粥.png",
-    "price": "55元",
-    "calories": "266kcal"
+    "calories": "144kcal",
+    "protein": "10g"
   },
   {
     "name": "石安牧場剝皮辣椒茶碗蒸",
     "imgSrc": "石安牧場剝皮辣椒茶碗蒸.png",
     "price": "43元",
-    "calories": "94kcal"
-  },
-  {
-    "name": "石安牧場蔬食茶碗蒸",
-    "imgSrc": "石安牧場蔬食茶碗蒸.png",
-    "price": "39元",
-    "calories": "98kcal"
-  },
-  {
-    "name": "宗家府泡菜冬粉",
-    "imgSrc": "宗家府泡菜冬粉.png",
-    "price": "55元",
-    "calories": "327kcal"
-  },
-  {
-    "name": "大腸肉羹麵線",
-    "imgSrc": "大腸肉羹麵線.png",
-    "price": "59元",
-    "calories": "205kcal"
+    "calories": "94kcal",
+    "protein": "7g"
   },
   {
     "name": "木曜-香辣炸雞腿",
     "imgSrc": "木曜-香辣炸雞腿.png",
     "price": "55元",
-    "calories": "243kcal"
-  },
-  {
-    "name": "松包子雜糧起司饅頭",
-    "imgSrc": "松包子雜糧起司饅頭.png",
-    "price": "39元",
-    "calories": "278.2kcal"
-  },
-  {
-    "name": "CP-香Q白米飯",
-    "imgSrc": "CP-香Q白米飯.png",
-    "price": "20元"
-  },
-  {
-    "name": "黑胡椒雞柳條",
-    "imgSrc": "黑胡椒雞柳條.png",
-    "price": "49元",
-    "calories": "283kcal"
-  },
-  {
-    "name": "獨饗起司火腿蔥油餅",
-    "imgSrc": "獨饗起司火腿蔥油餅.png",
-    "price": "49元",
-    "calories": "445kcal"
-  },
-  {
-    "name": "滷鼎記香滷鵪鶉蛋",
-    "imgSrc": "滷鼎記香滷鵪鶉蛋.png",
-    "price": "49元",
-    "calories": "176kcal"
-  },
-  {
-    "name": "滿漢蒜味烤香腸",
-    "imgSrc": "滿漢蒜味烤香腸.png",
-    "price": "49元",
-    "calories": "281kcal"
-  },
-  {
-    "name": "台畜煙燻豬肝100g",
-    "imgSrc": "台畜煙燻豬肝100g.png",
-    "price": "79元",
-    "calories": "146kcal"
-  },
-  {
-    "name": "大腸炒小腸",
-    "imgSrc": "大腸炒小腸.png",
-    "price": "59元",
-    "calories": "196kcal"
-  },
-  {
-    "name": "油香椒麻蒟蒻(全素)",
-    "imgSrc": "油香椒麻蒟蒻(全素).png",
-    "price": "69元",
-    "calories": "170kcal"
-  },
-  {
-    "name": "如記真空綠竹筍",
-    "imgSrc": "如記真空綠竹筍.png",
-    "price": "69元",
-    "calories": "28kcal"
-  },
-  {
-    "name": "呷七碗麻辣臭豆腐",
-    "imgSrc": "呷七碗麻辣臭豆腐.png",
-    "price": "79元",
-    "calories": "226.5kcal"
-  },
-  {
-    "name": "厚燒玉子",
-    "imgSrc": "厚燒玉子.png",
-    "price": "49元",
-    "calories": "164kcal"
-  },
-  {
-    "name": "21Plus綜合鹽水雞",
-    "imgSrc": "21Plus綜合鹽水雞.png",
-    "price": "59元",
-    "calories": "130.9kcal"
-  },
-  {
-    "name": "21Plus炙烤香草雞胸條",
-    "imgSrc": "21Plus炙烤香草雞胸條.png",
-    "price": "59元",
-    "calories": "113.5kcal"
-  },
-  {
-    "name": "21Plus剝皮辣椒風味雞胸肉",
-    "imgSrc": "21Plus剝皮辣椒風味雞胸肉.png",
-    "price": "59元",
-    "calories": "115.7kcal"
-  },
-  {
-    "name": "乾杯炭火燒肉包",
-    "imgSrc": "乾杯炭火燒肉包.png",
-    "price": "42元",
-    "calories": "263kcal"
+    "calories": "243kcal",
+    "protein": "19g"
   },
   {
     "name": "冰烤地瓜",
     "imgSrc": "冰烤地瓜.png",
     "price": "35元",
-    "calories": "198kcal"
-  },
-  {
-    "name": "現蒸地瓜",
-    "imgSrc": "現蒸地瓜.png",
-    "price": "25-40元,依重量而訂元"
+    "calories": "198kcal",
+    "protein": "3g"
   }
 ]

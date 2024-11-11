@@ -1,394 +1,85 @@
 [
   {
-    "name": "剝皮小蜜柑盒",
-    "imgSrc": "剝皮小蜜柑盒.png",
-    "price": "89元"
-  },
-  {
     "name": "(區)21Plus椒香胡麻雞肉麵沙拉",
     "imgSrc": "(區)21Plus椒香胡麻雞肉麵沙拉.png",
     "price": "79元",
-    "calories": "274kcal"
-  },
-  {
-    "name": "蔬果和風醬",
-    "imgSrc": "蔬果和風醬.png",
-    "price": "15元",
-    "calories": "28kcal"
+    "calories": "274kcal",
+    "protein": "14g"
   },
   {
     "name": "搖搖沙拉 繽紛玉米",
     "imgSrc": "搖搖沙拉 繽紛玉米.png",
     "price": "59元",
-    "calories": "124kcal"
+    "calories": "124kcal",
+    "protein": "3g"
   },
   {
     "name": "搖搖沙拉 燻腸紅醬",
     "imgSrc": "搖搖沙拉 燻腸紅醬.png",
     "price": "59元",
-    "calories": "147kcal"
+    "calories": "147kcal",
+    "protein": "5g"
   },
   {
     "name": "搖搖沙拉 溏心蛋鮪魚",
     "imgSrc": "搖搖沙拉 溏心蛋鮪魚.png",
     "price": "59元",
-    "calories": "219kcal"
+    "calories": "219kcal",
+    "protein": "12g"
   },
   {
     "name": "烤雞纖穀時蔬沙拉餐",
     "imgSrc": "烤雞纖穀時蔬沙拉餐.png",
     "price": "99元",
-    "calories": "213kcal"
+    "calories": "213kcal",
+    "protein": "22g"
   },
   {
     "name": "紐奧良風味烤雞時蔬沙拉餐",
     "imgSrc": "紐奧良風味烤雞時蔬沙拉餐.png",
     "price": "99元",
-    "calories": "282kcal"
+    "calories": "282kcal",
+    "protein": "23g"
   },
   {
     "name": "蔥鹽手撕雞沙拉",
     "imgSrc": "蔥鹽手撕雞沙拉.png",
     "price": "79元",
-    "calories": "72kcal"
+    "calories": "72kcal",
+    "protein": "12g"
   },
   {
     "name": "糯麥紅藜雞絲沙拉",
     "imgSrc": "糯麥紅藜雞絲沙拉.png",
     "price": "59元",
-    "calories": "204kcal"
-  },
-  {
-    "name": "和風香辣烤魷魚",
-    "imgSrc": "和風香辣烤魷魚.png",
-    "price": "59元",
-    "calories": "78kcal"
+    "calories": "204kcal",
+    "protein": "15g"
   },
   {
     "name": "地瓜雞胸肉沙拉",
     "imgSrc": "地瓜雞胸肉沙拉.png",
     "price": "79元",
-    "calories": "134kcal"
+    "calories": "134kcal",
+    "protein": "18g"
   },
   {
     "name": "凱薩雞肉沙拉餐",
     "imgSrc": "凱薩雞肉沙拉餐.png",
     "price": "89元",
-    "calories": "204kcal"
-  },
-  {
-    "name": "溏心蛋洋芋",
-    "imgSrc": "溏心蛋洋芋.png",
-    "price": "49元",
-    "calories": "186kcal"
-  },
-  {
-    "name": "鮮蝦蛋沙拉",
-    "imgSrc": "鮮蝦蛋沙拉.png",
-    "price": "59元",
-    "calories": "221kcal"
-  },
-  {
-    "name": "薯泥鮮蔬蛋沙拉",
-    "imgSrc": "薯泥鮮蔬蛋沙拉.png",
-    "price": "60元",
-    "calories": "156kcal"
-  },
-  {
-    "name": "芝麻葉海鮮佐義式油醋沙拉",
-    "imgSrc": "芝麻葉海鮮佐義式油醋沙拉.png",
-    "price": "159元",
-    "calories": "139kcal"
-  },
-  {
-    "name": "普羅旺斯風味乾酪火腿沙拉",
-    "imgSrc": "普羅旺斯風味乾酪火腿沙拉.png",
-    "price": "139元",
-    "calories": "102kcal"
-  },
-  {
-    "name": "煙燻鮭魚、帆立貝沙拉",
-    "imgSrc": "煙燻鮭魚、帆立貝沙拉.png",
-    "price": "159元"
+    "calories": "204kcal",
+    "protein": "22g"
   },
   {
     "name": "21PLUS 香草烤雞沙拉",
     "imgSrc": "21PLUS 香草烤雞沙拉.png",
     "price": "69元",
-    "calories": "93kcal"
-  },
-  {
-    "name": "一日野菜-活力彩蔬",
-    "imgSrc": "一日野菜-活力彩蔬.png",
-    "price": "65元",
-    "calories": "98kcal"
-  },
-  {
-    "name": "一日野菜-四色海藻",
-    "imgSrc": "一日野菜-四色海藻.png",
-    "price": "60元",
-    "calories": "41kcal"
+    "calories": "93kcal",
+    "protein": "16g"
   },
   {
     "name": "凱薩風味嫩雞鮮蔬捲餅",
     "imgSrc": "凱薩風味嫩雞鮮蔬捲餅.png",
-    "price": "69元"
-  },
-  {
-    "name": "綺麗千島醬",
-    "imgSrc": "綺麗千島醬.png",
-    "price": "10元",
-    "calories": "122kcal"
-  },
-  {
-    "name": "綺麗和風醬",
-    "imgSrc": "綺麗和風醬.png",
-    "price": "10元",
-    "calories": "43kcal"
-  },
-  {
-    "name": "履歷美濃瓜切片",
-    "imgSrc": "履歷美濃瓜切片.png",
-    "price": "59元"
-  },
-  {
-    "name": "菲律賓火山鳳梨切片",
-    "imgSrc": "菲律賓火山鳳梨切片.png",
-    "price": "59元"
-  },
-  {
-    "name": "麻豆剝皮紅柚盒",
-    "imgSrc": "麻豆剝皮紅柚盒.png",
-    "price": "69元"
-  },
-  {
-    "name": "美國紅無籽葡萄袋",
-    "imgSrc": "美國紅無籽葡萄袋.png",
-    "price": "89元"
-  },
-  {
-    "name": "紅龍果切片",
-    "imgSrc": "紅龍果切片.png",
-    "price": "59元"
-  },
-  {
-    "name": "綠寶石無籽葡萄杯",
-    "imgSrc": "綠寶石無籽葡萄杯.png",
-    "price": "79元"
-  },
-  {
-    "name": "美國綠肉洋香瓜切片",
-    "imgSrc": "美國綠肉洋香瓜切片.png",
-    "price": "79元"
-  },
-  {
-    "name": "南非小蜜柑3入袋裝",
-    "imgSrc": "南非小蜜柑3入袋裝.png",
-    "price": "69元"
-  },
-  {
-    "name": "紐西蘭水蜜桃蘋果2入袋",
-    "imgSrc": "紐西蘭水蜜桃蘋果2入袋.png",
-    "price": "75元"
-  },
-  {
-    "name": "繽紛水果拼盤",
-    "imgSrc": "繽紛水果拼盤.png",
-    "price": "69元"
-  },
-  {
-    "name": "紐西蘭奇異果2入裝",
-    "imgSrc": "紐西蘭奇異果2入裝.png",
-    "price": "99元"
-  },
-  {
-    "name": "OPEN小將-智利富士蘋果袋",
-    "imgSrc": "OPEN小將-智利富士蘋果袋.png",
-    "price": "55元"
-  },
-  {
-    "name": "OPEN小將-芭樂切片",
-    "imgSrc": "OPEN小將-芭樂切片.png",
-    "price": "49元"
-  },
-  {
-    "name": "美濃木瓜切片",
-    "imgSrc": "美濃木瓜切片.png",
-    "price": "55元"
-  },
-  {
-    "name": "台灣上等蕉(裸賣)",
-    "imgSrc": "台灣上等蕉(裸賣).png",
-    "price": "20元"
-  },
-  {
-    "name": "台灣香蕉重量分享包(2入)",
-    "imgSrc": "台灣香蕉重量分享包(2入).png",
-    "price": "30元"
-  },
-  {
-    "name": "黃金玉米棒",
-    "imgSrc": "黃金玉米棒.png",
-    "price": "49元"
-  },
-  {
-    "name": "水果玉米棒",
-    "imgSrc": "水果玉米棒.png",
-    "price": "59元"
-  },
-  {
-    "name": "台塑有機牛蕃茄300g",
-    "imgSrc": "台塑有機牛蕃茄300g.png",
-    "price": "79元"
-  },
-  {
-    "name": "台塑有機青椒300g",
-    "imgSrc": "台塑有機青椒300g.png",
-    "price": "59元"
-  },
-  {
-    "name": "台塑有機小黃瓜300g",
-    "imgSrc": "台塑有機小黃瓜300g.png",
-    "price": "55元"
-  },
-  {
-    "name": "台塑有機鮮切南瓜200g",
-    "imgSrc": "台塑有機鮮切南瓜200g.png",
-    "price": "60元"
-  },
-  {
-    "name": "台塑有機櫛瓜200g",
-    "imgSrc": "台塑有機櫛瓜200g.png",
-    "price": "55元"
-  },
-  {
-    "name": "台塑有機山菠菜",
-    "imgSrc": "台塑有機山菠菜.png",
-    "price": "49元"
-  },
-  {
-    "name": "台塑有機苦瓜",
-    "imgSrc": "台塑有機苦瓜.png",
-    "price": "58元"
-  },
-  {
-    "name": "太陽有機山菠菜",
-    "imgSrc": "太陽有機山菠菜.png",
-    "price": "45元"
-  },
-  {
-    "name": "太陽有機空心菜",
-    "imgSrc": "太陽有機空心菜.png",
-    "price": "45元"
-  },
-  {
-    "name": "新鮮族洋蔥",
-    "imgSrc": "新鮮族洋蔥.png",
-    "price": "39元"
-  },
-  {
-    "name": "新鮮族產銷青江菜",
-    "imgSrc": "新鮮族產銷青江菜.png",
-    "price": "42元"
-  },
-  {
-    "name": "新鮮族產銷小白菜",
-    "imgSrc": "新鮮族產銷小白菜.png",
-    "price": "42元"
-  },
-  {
-    "name": "新鮮族產銷油菜",
-    "imgSrc": "新鮮族產銷油菜.png",
-    "price": "42元"
-  },
-  {
-    "name": "如記真空玉米筍",
-    "imgSrc": "如記真空玉米筍.png",
-    "price": "42元"
-  },
-  {
-    "name": "台塑有機薑",
-    "imgSrc": "台塑有機薑.png",
-    "price": "50元"
-  },
-  {
-    "name": "台塑鮮蒜仁120g",
-    "imgSrc": "台塑鮮蒜仁120g.png",
-    "price": "109元"
-  },
-  {
-    "name": "台塑有機蒜頭",
-    "imgSrc": "台塑有機蒜頭.png",
-    "price": "38元"
-  },
-  {
-    "name": "台塑有機粉蔥",
-    "imgSrc": "台塑有機粉蔥.png",
-    "price": "38元"
-  },
-  {
-    "name": "台塑有機空心菜250g",
-    "imgSrc": "台塑有機空心菜250g.png",
-    "price": "45元"
-  },
-  {
-    "name": "台塑有機玉米筍",
-    "imgSrc": "台塑有機玉米筍.png",
-    "price": "48元"
-  },
-  {
-    "name": "台塑嚴選台灣乾香菇",
-    "imgSrc": "台塑嚴選台灣乾香菇.png",
-    "price": "105元"
-  },
-  {
-    "name": "台塑有機白菜250g",
-    "imgSrc": "台塑有機白菜250g.png",
-    "price": "45元"
-  },
-  {
-    "name": "台塑有機青江菜250g",
-    "imgSrc": "台塑有機青江菜250g.png",
-    "price": "45元"
-  },
-  {
-    "name": "台塑有機小松菜250g",
-    "imgSrc": "台塑有機小松菜250g.png",
-    "price": "45元"
-  },
-  {
-    "name": "台塑有機黑葉白菜250g",
-    "imgSrc": "台塑有機黑葉白菜250g.png",
-    "price": "45元"
-  },
-  {
-    "name": "好菇道鴻喜菇(免洗)",
-    "imgSrc": "好菇道鴻喜菇(免洗).png",
-    "price": "38元"
-  },
-  {
-    "name": "台塑有機高冷高麗菜",
-    "imgSrc": "台塑有機高冷高麗菜.png",
-    "price": "55元"
-  },
-  {
-    "name": "台塑有機金針菇",
-    "imgSrc": "台塑有機金針菇.png",
-    "price": "42元"
-  },
-  {
-    "name": "台塑有機黑木耳",
-    "imgSrc": "台塑有機黑木耳.png",
-    "price": "55元"
-  },
-  {
-    "name": "好菇道舞菇(免洗)",
-    "imgSrc": "好菇道舞菇(免洗).png",
-    "price": "38元"
-  },
-  {
-    "name": "好菇道雪白菇(免洗)",
-    "imgSrc": "好菇道雪白菇(免洗).png",
-    "price": "38元"
+    "price": "69元",
+    "protein": "18g"
   }
 ]

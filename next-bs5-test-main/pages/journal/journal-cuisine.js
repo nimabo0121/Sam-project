@@ -34,7 +34,7 @@ export default function JournalCuisine({ onSelectItem }) {
   }, [hasMore, items])
 
   const handleImageClick = (item) => {
-    onSelectItem(item); // 單選時更新選中項目
+    onSelectItem(item) // 單選時更新選中項目
   }
 
   const display = (
@@ -44,7 +44,8 @@ export default function JournalCuisine({ onSelectItem }) {
         maxHeight: '600px',
         padding: '10px',
       }}
-      className="row row-cols-1 row-cols-md-4">
+      className="row row-cols-1 row-cols-md-4"
+    >
       {bigbite.map((v, i) => {
         return (
           <div className="col" key={`${v.name}-${i}`}>
@@ -63,7 +64,9 @@ export default function JournalCuisine({ onSelectItem }) {
             </div>
             <div className="card-body">
               <h5 className="card-title">{v.name}</h5>
-              <span>{v.calories}</span>
+              <span>
+                {v.calories}, 蛋白質:{v.protein}
+              </span>
             </div>
           </div>
         )

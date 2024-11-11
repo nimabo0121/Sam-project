@@ -2,94 +2,110 @@
   {
     "name": "芋頭炊粉湯",
     "imgSrc": "芋頭炊粉湯.png",
-    "price": "79元"
+    "price": "79元",
+    "protein": "2g"
   },
   {
     "name": "芋頭排骨酥湯麵",
     "imgSrc": "芋頭排骨酥湯麵.png",
     "price": "99元",
-    "calories": "430kcal"
+    "calories": "430kcal",
+    "protein": "20g"
   },
   {
     "name": "焗烤奶油蝦仁通心粉",
     "imgSrc": "焗烤奶油蝦仁通心粉.png",
-    "price": "69元"
+    "price": "69元",
+    "protein": "15g"
   },
   {
     "name": "木曜-香蒜番茄野菇義大利麵",
     "imgSrc": "木曜-香蒜番茄野菇義大利麵.png",
     "price": "89元",
-    "calories": "480kcal"
+    "calories": "480kcal",
+    "protein": "12g"
   },
   {
     "name": "韓式炸醬拌麵",
     "imgSrc": "韓式炸醬拌麵.png",
     "price": "85元",
-    "calories": "601kcal"
+    "calories": "601kcal",
+    "protein": "18g"
   },
   {
     "name": "日式擔擔冷烏龍麵",
     "imgSrc": "日式擔擔冷烏龍麵.png",
-    "price": "89元"
+    "price": "89元",
+    "protein": "13g"
   },
   {
     "name": "日式蕎麥風味麵",
     "imgSrc": "日式蕎麥風味麵.png",
     "price": "52元",
-    "calories": "320kcal"
+    "calories": "320kcal",
+    "protein": "9g"
   },
   {
     "name": "真飽涼麵-特選麻醬",
     "imgSrc": "真飽涼麵-特選麻醬.png",
     "price": "59元",
-    "calories": "674kcal"
+    "calories": "674kcal",
+    "protein": "15g"
   },
   {
     "name": "真飽涼麵-蒜辣麻醬",
     "imgSrc": "真飽涼麵-蒜辣麻醬.png",
     "price": "59元",
-    "calories": "676kcal"
+    "calories": "676kcal",
+    "protein": "14g"
   },
   {
     "name": "御選川辣麻醬雞絲涼麵",
     "imgSrc": "御選川辣麻醬雞絲涼麵.png",
     "price": "59元",
-    "calories": "524kcal"
+    "calories": "524kcal",
+    "protein": "22g"
   },
   {
     "name": "御選麻醬雞絲涼麵",
     "imgSrc": "御選麻醬雞絲涼麵.png",
     "price": "59元",
-    "calories": "496kcal"
+    "calories": "496kcal",
+    "protein": "20g"
   },
   {
     "name": "御選-精燉紅燒牛肉麵",
     "imgSrc": "御選-精燉紅燒牛肉麵.png",
     "price": "139元",
-    "calories": "553kcal"
+    "calories": "553kcal",
+    "protein": "26g"
   },
   {
     "name": "府城鹽水風味意麵",
     "imgSrc": "府城鹽水風味意麵.png",
     "price": "79元",
-    "calories": "570kcal"
+    "calories": "570kcal",
+    "protein": "13g"
   },
   {
     "name": "蘑菇雙醬豬排鐵板麵",
     "imgSrc": "蘑菇雙醬豬排鐵板麵.png",
     "price": "89元",
-    "calories": "599kcal"
+    "calories": "599kcal",
+    "protein": "22g"
   },
   {
     "name": "蔥爆沙茶牛肉炒麵",
     "imgSrc": "蔥爆沙茶牛肉炒麵.png",
     "price": "89元",
-    "calories": "571kcal"
+    "calories": "571kcal",
+    "protein": "23g"
   },
   {
     "name": "滿漢大餐酸菜牛肉拌麵",
     "imgSrc": "滿漢大餐酸菜牛肉拌麵.png",
     "price": "109元",
-    "calories": "500kcal"
+    "calories": "500kcal",
+    "protein": "30g"
   }
 ]

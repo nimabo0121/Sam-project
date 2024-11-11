@@ -3,264 +3,210 @@
     "name": "小龍蝦魚卵飯糰",
     "imgSrc": "小龍蝦魚卵飯糰.png",
     "price": "39元",
-    "calories": "229kcal"
+    "calories": "229kcal",
+    "protein": "12g"
   },
   {
     "name": "握便當-豪華秘製雙拼",
     "imgSrc": "握便當-豪華秘製雙拼.png",
     "price": "59元",
-    "calories": "428kcal"
+    "calories": "428kcal",
+    "protein": "22g"
   },
   {
     "name": "握便當-黑胡椒烤雞",
     "imgSrc": "握便當-黑胡椒烤雞.png",
     "price": "59元",
-    "calories": "334kcal"
+    "calories": "334kcal",
+    "protein": "24g"
   },
   {
     "name": "握便當-鐵板黑胡椒烤雞",
     "imgSrc": "握便當-鐵板黑胡椒烤雞.png",
     "price": "59元",
-    "calories": "373kcal"
+    "calories": "373kcal",
+    "protein": "26g"
   },
   {
     "name": "台北鳥喜握便當-炙燒雞腿丼",
     "imgSrc": "台北鳥喜握便當-炙燒雞腿丼.png",
     "price": "59元",
-    "calories": "240kcal"
+    "calories": "240kcal",
+    "protein": "20g"
   },
   {
     "name": "新極大-海陸卷壽司",
     "imgSrc": "新極大-海陸卷壽司.png",
     "price": "89元",
-    "calories": "551kcal"
+    "calories": "551kcal",
+    "protein": "28g"
   },
   {
     "name": "北海道秋鮭鮪魚雙手卷",
     "imgSrc": "北海道秋鮭鮪魚雙手卷.png",
     "price": "59元",
-    "calories": "358kcal"
+    "calories": "358kcal",
+    "protein": "25g"
   },
   {
     "name": "豪華海鮮雙手卷",
     "imgSrc": "豪華海鮮雙手卷.png",
     "price": "59元",
-    "calories": "341kcal"
+    "calories": "341kcal",
+    "protein": "23g"
   },
   {
     "name": "鮪魚肉鬆雙手卷",
     "imgSrc": "鮪魚肉鬆雙手卷.png",
     "price": "59元",
-    "calories": "404kcal"
+    "calories": "404kcal",
+    "protein": "30g"
   },
   {
     "name": "繽紛花漾壽司組",
     "imgSrc": "繽紛花漾壽司組.png",
     "price": "79元",
-    "calories": "369kcal"
+    "calories": "369kcal",
+    "protein": "18g"
   },
   {
     "name": "海陸雙拼壽司組",
     "imgSrc": "海陸雙拼壽司組.png",
     "price": "69元",
-    "calories": "507kcal"
+    "calories": "507kcal",
+    "protein": "32g"
   },
   {
     "name": "日本豆皮壽司",
     "imgSrc": "日本豆皮壽司.png",
     "price": "49元",
-    "calories": "317kcal"
+    "calories": "317kcal",
+    "protein": "14g"
   },
   {
     "name": "晶華霜降和牛飯糰",
     "imgSrc": "晶華霜降和牛飯糰.png",
     "price": "59元",
-    "calories": "221kcal"
+    "calories": "221kcal",
+    "protein": "18g"
   },
   {
     "name": "沙茶炙燒魷魚烤飯糰",
     "imgSrc": "沙茶炙燒魷魚烤飯糰.png",
     "price": "49元",
-    "calories": "252kcal"
+    "calories": "252kcal",
+    "protein": "16g"
   },
   {
     "name": "壹番屋-炸雞起司咖哩飯糰",
     "imgSrc": "壹番屋-炸雞起司咖哩飯糰.png",
     "price": "45元",
-    "calories": "261kcal"
+    "calories": "261kcal",
+    "protein": "18g"
   },
   {
     "name": "冠軍飯糰-醬香起司雞",
     "imgSrc": "冠軍飯糰-醬香起司雞.png",
     "price": "39元",
-    "calories": "286kcal"
+    "calories": "286kcal",
+    "protein": "20g"
   },
   {
     "name": "老協珍壽喜燒牛五花珍米堡",
     "imgSrc": "老協珍壽喜燒牛五花珍米堡.png",
     "price": "59元",
-    "calories": "332kcal"
+    "calories": "332kcal",
+    "protein": "22g"
   },
   {
     "name": "乾杯-炭烤燒肉新極大烤飯糰",
     "imgSrc": "乾杯-炭烤燒肉新極大烤飯糰.png",
     "price": "49元",
-    "calories": "228kcal"
+    "calories": "228kcal",
+    "protein": "17g"
   },
   {
     "name": "新極上飯糰-御選蒲燒鰻",
     "imgSrc": "新極上飯糰-御選蒲燒鰻.png",
     "price": "59元",
-    "calories": "222kcal"
+    "calories": "222kcal",
+    "protein": "19g"
   },
   {
     "name": "新極上飯糰-韓國紅雪蟹膏",
     "imgSrc": "新極上飯糰-韓國紅雪蟹膏.png",
     "price": "55元",
-    "calories": "224kcal"
+    "calories": "224kcal",
+    "protein": "15g"
   },
   {
     "name": "新極上飯糰-日本帆立貝",
     "imgSrc": "新極上飯糰-日本帆立貝.png",
     "price": "59元",
-    "calories": "223kcal"
+    "calories": "223kcal",
+    "protein": "16g"
   },
   {
     "name": "新極上飯糰-鮭魚鮭魚卵",
     "imgSrc": "新極上飯糰-鮭魚鮭魚卵.png",
     "price": "55元",
-    "calories": "225kcal"
+    "calories": "225kcal",
+    "protein": "18g"
   },
   {
     "name": "新極上飯糰-熟成明太子鮭魚",
     "imgSrc": "新極上飯糰-熟成明太子鮭魚.png",
     "price": "55元",
-    "calories": "196kcal"
+    "calories": "196kcal",
+    "protein": "14g"
   },
   {
     "name": "星宇新極上-胡同炭火霜降牛",
     "imgSrc": "星宇新極上-胡同炭火霜降牛.png",
     "price": "55元",
-    "calories": "235kcal"
+    "calories": "235kcal",
+    "protein": "20g"
   },
   {
     "name": "櫸木燻雞飯糰",
     "imgSrc": "櫸木燻雞飯糰.png",
     "price": "25元",
-    "calories": "203kcal"
+    "calories": "203kcal",
+    "protein": "12g"
   },
   {
     "name": "宗家府泡菜燒肉飯糰",
     "imgSrc": "宗家府泡菜燒肉飯糰.png",
     "price": "39元",
-    "calories": "216kcal"
+    "calories": "216kcal",
+    "protein": "15g"
   },
   {
     "name": "蔥鹽雞糯麥紅藜飯糰",
     "imgSrc": "蔥鹽雞糯麥紅藜飯糰.png",
     "price": "39元",
-    "calories": "185kcal"
+    "calories": "185kcal",
+    "protein": "14g"
   },
   {
     "name": "蔥油雞汁拌飯飯糰",
     "imgSrc": "蔥油雞汁拌飯飯糰.png",
     "price": "23元",
-    "calories": "197kcal"
+    "calories": "197kcal",
+    "protein": "13g"
   },
   {
     "name": "新加坡香辣海鮮飯糰",
     "imgSrc": "新加坡香辣海鮮飯糰.png",
     "price": "45元",
-    "calories": "188kcal"
+    "calories": "188kcal",
+    "protein": "14g"
   },
   {
     "name": "海鮮小龍蝦飯糰",
     "imgSrc": "海鮮小龍蝦飯糰.png",
-    "price": "39元",
-    "calories": "229kcal"
-  },
-  {
-    "name": "橋村炸雞新極大飯糰",
-    "imgSrc": "橋村炸雞新極大飯糰.png",
     "price": "49元",
-    "calories": "289kcal"
-  },
-  {
-    "name": "21Plus椒麻手撕雞飯糰",
-    "imgSrc": "21Plus椒麻手撕雞飯糰.png",
-    "price": "39元",
-    "calories": "231kcal"
-  },
-  {
-    "name": "木曜-麻辣小龍蝦新極大飯糰",
-    "imgSrc": "木曜-麻辣小龍蝦新極大飯糰.png",
-    "price": "49元",
-    "calories": "289kcal"
-  },
-  {
-    "name": "御選肉鬆飯糰",
-    "imgSrc": "御選肉鬆飯糰.png",
-    "price": "28元",
-    "calories": "248kcal"
-  },
-  {
-    "name": "培根蛋沙拉飯糰",
-    "imgSrc": "培根蛋沙拉飯糰.png",
-    "price": "23元",
-    "calories": "203kcal"
-  },
-  {
-    "name": "鮭魚鮭魚卵飯糰(圓)",
-    "imgSrc": "鮭魚鮭魚卵飯糰(圓).png",
-    "price": "45元",
-    "calories": "176kcal"
-  },
-  {
-    "name": "炙燒明太子鮭魚飯糰(圓)",
-    "imgSrc": "炙燒明太子鮭魚飯糰(圓).png",
-    "price": "42元",
-    "calories": "185kcal"
-  },
-  {
-    "name": "石安牧場溏心蛋飯糰(圓)",
-    "imgSrc": "石安牧場溏心蛋飯糰(圓).png",
-    "price": "39元",
-    "calories": "180kcal"
-  },
-  {
-    "name": "林聰明-雞肉飯飯糰",
-    "imgSrc": "林聰明-雞肉飯飯糰.png",
-    "price": "36元",
-    "calories": "211kcal"
-  },
-  {
-    "name": "炙燒松阪豬",
-    "imgSrc": "炙燒松阪豬.png",
-    "price": "45元",
-    "calories": "193kcal"
-  },
-  {
-    "name": "雙蔬鮪魚飯糰",
-    "imgSrc": "雙蔬鮪魚飯糰.png",
-    "price": "30元",
-    "calories": "221kcal"
-  },
-  {
-    "name": "蔥鹽燒肉飯糰",
-    "imgSrc": "蔥鹽燒肉飯糰.png",
-    "price": "30元",
-    "calories": "207kcal"
-  },
-  {
-    "name": "麻油雞飯糰",
-    "imgSrc": "麻油雞飯糰.png",
-    "price": "49元",
-    "calories": "362kcal"
-  },
-  {
-    "name": "阜杭豆漿-經典飯糰",
-    "imgSrc": "阜杭豆漿-經典飯糰.png",
-    "price": "45元",
-    "calories": "569kcal"
+    "calories": "245kcal",
+    "protein": "18g"
   }
 ]

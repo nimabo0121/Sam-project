@@ -2,6 +2,7 @@ CREATE TABLE healthy_batch (
   id INT PRIMARY KEY AUTO_INCREMENT,         -- 批次ID，自動遞增
   healthy_id INT,                            -- 用戶ID，外鍵
   batch_sum INT,                             -- 總熱量
+  batch_p_sum int,                           -- 總蛋白質
   batch_name VARCHAR(255),                   -- 批次名稱或描述
   batch_date date,                           -- 批次時間
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- 批次創建時間
@@ -15,6 +16,8 @@ CREATE TABLE healthy (
   batch_id INT,                              -- 批次編號，用來區分該用戶當下儲存的所有資訊
   healthy_name VARCHAR(255),                 -- 食物名稱
   healthy_calories INT,                      -- 食物熱量
+  healthy_protein int,                       -- 食物蛋白質
+  protein_sum int,                           -- 總蛋白質
   healthy_sum INT,                           -- 熱量總和
   notes TEXT,                                -- 備註
   record_date DATE,                          -- 記錄日期
