@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useMemo, useState, useEffect } from 'react'
 import axios from 'axios'
 
 export default function JournalCalculation({
@@ -7,7 +7,7 @@ export default function JournalCalculation({
 }) {
   const [notes, setNotes] = useState('')
   const [successMessage, setSuccessMessage] = useState('')
-
+  const [tags, setTags] = useState([])
   const getLocalDate = () => {
     const localDate = new Date()
     const year = localDate.getFullYear()
@@ -87,6 +87,30 @@ export default function JournalCalculation({
   const handleDeleteItem = (index) => {
     const newSelectedItems = selectedItems.filter((_, i) => i !== index)
     setSelectedItems(newSelectedItems)
+  }
+  const fetchTags = async () => {
+    try {
+      const response = await axios.get(
+        'http://localhost:3005/api/healthy/labelget',
+        { withCredentials: true }
+      )
+      const tagsData = Array.isArray(response.data.data)
+        ? response.data.data
+        : [response.data.data]
+      setTags(tagsData)
+    } catch (error) {
+      console.error('取得標籤資料錯誤:', error)
+    }
+  }
+  useEffect(() => {
+    fetchTags()
+  }, [])
+
+  const handleTagClick = (labelName) => {
+    if (!labelName) return
+    setNotes((prevNotes) =>
+      prevNotes ? `${prevNotes} ${labelName}` : labelName
+    )
   }
 
   return (
@@ -211,6 +235,21 @@ export default function JournalCalculation({
           value={notes}
           onChange={handleNotesChange}
         ></textarea>
+      </div>
+      <div className="d-flex flex-wrap">
+        {tags.map((tag) =>
+          tag && tag.label_name ? (
+            <div key={tag.id}>
+              <button
+                type="button"
+                className="btn btn-outline-success"
+                onClick={() => handleTagClick(tag.label_name)}
+              >
+                {tag.label_name}
+              </button>
+            </div>
+          ) : null
+        )}
       </div>
 
       {/* 用 div 包裝總熱量 */}

@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useMemo, useState, useEffect } from 'react'
 import axios from 'axios'
 
 export default function JournalManual() {
@@ -11,6 +11,7 @@ export default function JournalManual() {
   const [itemNameError, setItemNameError] = useState('')
   const [itemCaloriesError, setItemCaloriesError] = useState('')
   const [itemProteinError, setItemProteinError] = useState('')
+  const [tags, setTags] = useState([])
 
   const getLocalDate = () => {
     const localDate = new Date()
@@ -149,6 +150,31 @@ export default function JournalManual() {
   const handleClear = () => {
     setSelectedItems([])
     setNotes('')
+  }
+
+  const fetchTags = async () => {
+    try {
+      const response = await axios.get(
+        'http://localhost:3005/api/healthy/labelget',
+        { withCredentials: true }
+      )
+      const tagsData = Array.isArray(response.data.data)
+        ? response.data.data
+        : [response.data.data]
+      setTags(tagsData)
+    } catch (error) {
+      console.error('取得標籤資料錯誤:', error)
+    }
+  }
+  useEffect(() => {
+    fetchTags()
+  }, [])
+
+  const handleTagClick = (labelName) => {
+    if (!labelName) return
+    setNotes((prevNotes) =>
+      prevNotes ? `${prevNotes} ${labelName}` : labelName
+    )
   }
 
   return (
@@ -301,7 +327,7 @@ export default function JournalManual() {
       </table>
 
       <div className="mb-3 pt-1">
-      <textarea
+        <textarea
           className="form-control"
           id="exampleFormControlTextarea1"
           rows="3"
@@ -309,6 +335,21 @@ export default function JournalManual() {
           value={notes}
           onChange={handleNotesChange}
         ></textarea>
+      </div>
+      <div className="d-flex flex-wrap">
+        {tags.map((tag) =>
+          tag && tag.label_name ? (
+            <div key={tag.id}>
+              <button
+                type="button"
+                className="btn btn-outline-success"
+                onClick={() => handleTagClick(tag.label_name)}
+              >
+                {tag.label_name}
+              </button>
+            </div>
+          ) : null
+        )}
       </div>
 
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>

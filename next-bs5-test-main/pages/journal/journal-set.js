@@ -102,8 +102,8 @@ export default function JournalSet() {
             key={tag.id}
             style={{
               position: 'relative',
-              marginRight: '0.5rem',
-              marginBottom: '0.5rem',
+              marginRight: '0.3rem',
+              marginBottom: '0.1rem',
             }}
             className="tag-container"
             onMouseEnter={(e) => {
@@ -143,14 +143,14 @@ export default function JournalSet() {
                 display: 'none', // 初始隱藏刪除按鈕
                 alignItems: 'center', // 垂直置中
                 justifyContent: 'center', // 水平置中
-                backgroundColor: 'white',
-                color: 'red',
-                border: '1px solid red',
+                backgroundColor: 'red',
+                color: 'white',
+                border: '0px solid red',
                 cursor: 'pointer',
                 padding: '0',
               }}
             >
-              x
+              X
             </button>
           </div>
         ))}
@@ -175,12 +175,12 @@ export default function JournalSet() {
             placeholder="輸入標籤名稱"
             className="form-control"
           />
-          <button onClick={handleAddTag} className="btn btn-primary">
+          <button onClick={handleAddTag} className="btn btn-outline-secondary">
             新增標籤
           </button>
           <button
             onClick={() => setIsAddingTag(false)}
-            className="btn btn-secondary"
+            className="btn btn-outline-secondary"
           >
             取消
           </button>
@@ -196,10 +196,13 @@ export default function JournalSet() {
             placeholder="修改標籤名稱"
             className="form-control"
           />
-          <button onClick={handleSaveTag} className="btn btn-primary">
+          <button onClick={handleSaveTag} className="btn btn-outline-secondary">
             修改
           </button>
-          <button onClick={handleCancelEdit} className="btn btn-secondary">
+          <button
+            onClick={handleCancelEdit}
+            className="btn btn-outline-secondary"
+          >
             取消
           </button>
         </div>
