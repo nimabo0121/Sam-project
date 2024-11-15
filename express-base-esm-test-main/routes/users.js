@@ -167,6 +167,7 @@ router.post('/', async function (req, res) {
       password: newUser.password,
       username: newUser.username,
       email: newUser.email,
+      avatar: 'default.png',
       sex: newUser.sex,
       birth_date: newUser.birth_date,
       phone: newUser.phone,
